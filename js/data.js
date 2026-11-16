@@ -305,15 +305,19 @@ window.PROJECTS = [
     "name": "AI PII Detector",
     "title": "Privacy detection & data masking",
     "short": "Finds sensitive information before it becomes a problem. A hybrid regex and spaCy NLP pipeline reads PDF, DOCX, CSV, XLSX and TXT files, scores risk, then masks what it finds — in batch, from the CLI or the web app.",
-    "tags": "Python · Flask · Regex + spaCy",
+    "tags": "Python · Flask · React · TypeScript",
     "blurb": "Finds sensitive information before it becomes a problem. A hybrid regex and spaCy pipeline reads five file formats, scores risk, and masks what it finds.",
     "stack": [
       "PYTHON",
       "FLASK",
-      "REGEX",
+      "REACT 19",
+      "TYPESCRIPT",
+      "VITE",
+      "TAILWIND",
       "SPACY NLP",
+      "REGEX",
       "BATCH / CLI",
-      "TESTING"
+      "PYTEST"
     ],
     "links": [
       {
@@ -338,7 +342,8 @@ window.PROJECTS = [
         "h": "WHAT I BUILT",
         "body": [
           "A hybrid detection pipeline: regex catches the structured identifiers reliably, and an optional spaCy NLP pass picks up names and entities that patterns miss. Results are scored so a reviewer can triage rather than read everything.",
-          "Batch processing and a CLI make it usable over directories of files, and the detection logic is covered by tests — a pipeline that silently stops matching is worse than none."
+          "Batch processing and a CLI make it usable over directories of files, and the detection logic is covered by tests — a pipeline that silently stops matching is worse than none.",
+          "The web app is a React and TypeScript frontend (Tailwind, Base UI, Motion) over the Flask JSON API: a risk gauge, in-place highlights you can filter by type, and masked output that updates as you change the style. It is bundled into Flask's static folder, so the app still runs offline with no Node at runtime."
         ]
       }
     ],
@@ -353,7 +358,7 @@ window.PROJECTS = [
     "gallery": [
       {
         "src": "assets/pii-scan.jpg",
-        "alt": "PII Detector: a sample document with names, dates, email, PAN, Aadhaar and IP highlighted, a critical risk score of 98 and GDPR, DPDP and HIPAA flags",
+        "alt": "PII Detector: a sample document with names, dates, email, phone, PAN, Aadhaar and IP highlighted, a critical risk score of 100 and GDPR, DPDP and HIPAA flags",
         "cap": "A scan of fictional sample data — every identifier highlighted, risk scored, compliance flagged"
       },
       {
