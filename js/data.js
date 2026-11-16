@@ -314,9 +314,10 @@ window.PROJECTS = [
       "TYPESCRIPT",
       "VITE",
       "TAILWIND",
+      "BASE UI",
+      "MOTION",
       "SPACY NLP",
-      "REGEX",
-      "BATCH / CLI",
+      "REGEX + LUHN",
       "PYTEST"
     ],
     "links": [
@@ -343,28 +344,32 @@ window.PROJECTS = [
         "body": [
           "A hybrid detection pipeline: regex catches the structured identifiers reliably, and an optional spaCy NLP pass picks up names and entities that patterns miss. Results are scored so a reviewer can triage rather than read everything.",
           "Batch processing and a CLI make it usable over directories of files, and the detection logic is covered by tests — a pipeline that silently stops matching is worse than none.",
-          "The web app is a React and TypeScript frontend (Tailwind, Base UI, Motion) over the Flask JSON API: a risk gauge, in-place highlights you can filter by type, and masked output that updates as you change the style. It is bundled into Flask's static folder, so the app still runs offline with no Node at runtime."
+          "The web app is a React and TypeScript workspace (Tailwind, Base UI, Motion) over the Flask JSON API: findings highlight in place in the editor, a risk gauge breaks exposure down by sensitivity, an inspector explains each detection against GDPR, DPDP, HIPAA and PCI DSS, and a side-by-side view shows exactly which lines masking changes. There is a command palette, a privacy mode that blurs values, a dark theme, and exports that keep values redacted. It is bundled into Flask's static folder, so it still runs offline with no Node at runtime.",
+          "Building the interface surfaced a real detector bug: any 16-digit number matched a blanket 'placeholder' pattern, so genuine card numbers were silently dropped from the risk score. Card detection now accepts grouped numbers and requires a valid Luhn checksum, with well-known test cards still treated as placeholders, and the fix ships with regression tests."
         ]
       }
     ],
     "now": [
       "PDF / DOCX / CSV / XLSX / TXT",
-      "REGEX DETECTION",
-      "OPTIONAL SPACY PASS",
-      "RISK SCORING",
-      "AUTOMATED MASKING",
-      "BATCH + CLI PROCESSING"
+      "REGEX + OPTIONAL SPACY PASS",
+      "LUHN-VALIDATED CARDS",
+      "RISK SCORE + COMPLIANCE FLAGS",
+      "LIVE IN-PLACE HIGHLIGHTS",
+      "ENTITY INSPECTOR + MINIMAP",
+      "SIDE-BY-SIDE MASKING",
+      "COMMAND PALETTE",
+      "REDACTED EXPORTS"
     ],
     "gallery": [
       {
         "src": "assets/pii-scan.jpg",
-        "alt": "PII Detector: a sample document with names, dates, email, phone, PAN, Aadhaar and IP highlighted, a critical risk score of 100 and GDPR, DPDP and HIPAA flags",
-        "cap": "A scan of fictional sample data — every identifier highlighted, risk scored, compliance flagged"
+        "alt": "PII Detector workspace: editor with highlighted identifiers on the left; on the right a critical risk score of 100 with GDPR, DPDP, HIPAA and PCI DSS flags and cards per data type",
+        "cap": "The workspace after a scan of fictional sample data: highlights in the editor, risk score 100, regulation flags and per-type cards"
       },
       {
         "src": "assets/pii-masked.jpg",
-        "alt": "PII Detector: the masked output tab, with partial masking applied to the same document",
-        "cap": "The same document, masked"
+        "alt": "PII Detector compare view: original text and partially masked text side by side, with the changed lines highlighted",
+        "cap": "Compare: the original beside the masked copy, with changed lines marked"
       }
     ]
   },
