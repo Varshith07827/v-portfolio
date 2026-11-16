@@ -5,246 +5,171 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Venkata Sai Varshith — AI / Systems / Automation</title>
 <meta name="description" content="Venkata Sai Varshith — AI, systems and automation engineer. City-scale simulation, browser and desktop automation, and AI tooling that handles real work.">
+<meta name="theme-color" content="#121D18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  html { background: #F4F0E8; scroll-behavior: smooth; }
-  body { margin: 0; background: #F4F0E8; color: #151311; font-family: "Bricolage Grotesque", system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
-  * { box-sizing: border-box; }
-  a { color: #151311; text-decoration: none; }
-  a:hover { color: #D63A12; }
-  ::selection { background: #D63A12; color: #FFF8F0; }
-  :focus-visible { outline: 2px solid #D63A12; outline-offset: 3px; }
-  h1, h2, h3, h4, p, ul, ol, figure { margin: 0; padding: 0; }
-  ul, ol { list-style: none; }
-  img { display: block; max-width: 100%; }
-  @keyframes vdrift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; } }
-
-  .navlink { color: #6B655C; flex-shrink: 0; white-space: nowrap; }
-  .navlink:hover { color: #151311; }
-  .navscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
-  .navscroll::-webkit-scrollbar { display: none; }
-  .taglink { border: 1px solid #BDB4A0; }
-  .taglink:hover { border-color: #151311; color: #151311; }
-  .emailbtn { border: 1px solid #D63A12; color: #D63A12; }
-  .emailbtn:hover { background: #D63A12; color: #FFF8F0; }
-  .worklink:hover { color: #151311; }
-  .contacttile:hover { background: #D63A12; color: #FFF8F0; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div style="min-height: 100vh; overflow-x: hidden;">
 
-<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; padding: 14px clamp(16px, 4vw, 64px); background: rgba(244,240,232,0.82); backdrop-filter: blur(14px); border-bottom: 1px solid #D6CFBF;">
-  <a href="#top" style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">Varshith</a>
-  <nav aria-label="Sections" class="navscroll" style="display: flex; gap: clamp(12px, 2.2vw, 28px); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; min-width: 0;">
-    <a href="#work" class="navlink">WORK</a>
-    <a href="#experience" class="navlink">EXPERIENCE</a>
-    <a href="#problem-solving" class="navlink">CP</a>
-    <a href="#about" class="navlink">ABOUT</a>
-    <a href="#contact" class="navlink">CONTACT</a>
-  </nav>
+<header class="mast">
+  <div class="wrap">
+    <a class="mast-mark" href="#top">Varshith</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#problem-solving">Problems</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<main id="top" style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 64px);">
+<main id="top" class="wrap">
 
-  <section aria-label="Introduction" style="padding: clamp(110px, 17vh, 190px) 0 clamp(48px, 8vh, 96px);">
-    <p style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #7F786D; margin-bottom: clamp(24px, 5vh, 56px);">VISAKHAPATNAM, INDIA — SELECTED WORK / 2026</p>
-    <h1 style="font-size: clamp(42px, 12.5vw, 176px); font-weight: 700; line-height: 0.86; letter-spacing: -0.045em;">VENKATA SAI<br>VARSHITH</h1>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(24px, 4vw, 64px); align-items: end; margin-top: clamp(32px, 6vh, 72px); padding-top: clamp(24px, 4vh, 40px); border-top: 1px solid #D6CFBF;">
+  <section class="hero" aria-label="Introduction">
+    <p class="label">Visakhapatnam, India — Selected work, 2026</p>
+    <h1 class="hero-name">Venkata Sai <em>Varshith</em></h1>
+    <div class="hero-foot">
       <div>
-        <h2 style="font-size: clamp(22px, 2.8vw, 44px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em;">AI <span style="color: #D63A12;">/</span> SYSTEMS <span style="color: #D63A12;">/</span> AUTOMATION</h2>
-        <p style="margin-top: 18px; max-width: 46ch; font-size: clamp(15px, 1.2vw, 19px); line-height: 1.5; color: #4A453F;">I build software that does more than sit on a screen — city-scale simulation, automation engines that drive other software, and AI tooling that handles real work.</p>
+        <p class="dek">I build software that does more than sit on a screen — city-scale simulation, automation engines that drive other software, and AI tooling that handles real work.</p>
+        <p class="label dek-sub">AI <span class="gold">/</span> Systems <span class="gold">/</span> Automation</p>
       </div>
-      <ul style="display: flex; flex-wrap: wrap; gap: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em;">
-        <li><a href="https://github.com/Varshith07827" target="_blank" rel="noopener" class="taglink" style="display: inline-block; padding: 12px 16px;">GITHUB ↗</a></li>
-        <li><a href="https://www.linkedin.com/in/saivarshith-" target="_blank" rel="noopener" class="taglink" style="display: inline-block; padding: 12px 16px;">LINKEDIN ↗</a></li>
-        <li><a href="https://drive.google.com/file/d/1TyIl5IZtQ8gXd5CH3LH8my7f1z_xphY0/view?usp=sharing" target="_blank" rel="noopener" class="taglink" style="display: inline-block; padding: 12px 16px;">RÉSUMÉ ↗</a></li>
-        <li><a href="mailto:sandakavarshith@gmail.com" class="emailbtn" style="display: inline-block; padding: 12px 16px;">EMAIL ↗</a></li>
-      </ul>
-    </div>
-    <div style="display: flex; align-items: center; gap: 12px; margin-top: clamp(40px, 9vh, 88px); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: #8F887B;">
-      <span style="display: inline-block; animation: vdrift 2.6s ease-in-out infinite;">↓</span><span>SIX SELECTED SYSTEMS</span>
-    </div>
-  </section>
-
-  <section id="work" style="padding: clamp(56px, 10vh, 120px) 0 0; border-top: 1px solid #D6CFBF;">
-    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
-      <h2 style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #7F786D; font-weight: 400;">SELECTED WORK</h2>
-      <p style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8F887B;">01 — 06</p>
-    </div>
-
-    <article style="margin-top: clamp(32px, 6vh, 72px);">
-      <a href="case.html#digitwin" class="worklink" style="display: block;">
-        <div style="display: flex; align-items: flex-start; gap: clamp(16px, 3vw, 40px); flex-wrap: wrap;">
-          <span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em; color: #D63A12; padding-top: 0.7em;">01</span>
-          <div style="flex: 1 1 320px; min-width: 0;">
-            <h3 style="font-size: clamp(38px, 9vw, 132px); font-weight: 700; line-height: 0.88; letter-spacing: -0.04em;">DIGITWIN</h3>
-            <p style="margin-top: 14px; font-size: clamp(17px, 1.9vw, 30px); font-weight: 500; letter-spacing: -0.015em; line-height: 1.15;">City-scale digital twin &amp; infrastructure simulation</p>
-          </div>
-          <p style="flex: 0 1 300px; max-width: 40ch; font-size: 15px; line-height: 1.55; color: #4A453F; padding-top: 0.5em;">A 3D twin of central London built on real OpenStreetMap geometry, with the water network modelled as a graph you can break, isolate and repair to watch failure propagate.</p>
-        </div>
-        <figure style="margin-top: clamp(24px, 4vh, 44px); border: 1px solid #D6CFBF; background: #EBE6DB;">
-          <img src="assets/digitwin-network.jpeg" alt="DigiTwin in a browser: 3D London buildings with road and water-network overlays beside a water simulation panel" loading="lazy" style="width: 100%; height: auto;">
-          <figcaption style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 12px 16px; border-top: 1px solid #D6CFBF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;"><span>WATER NETWORK OVER OSM ROAD GRAPH</span><span>CESIUM / RESIUM · FASTAPI · NETWORKX</span></figcaption>
-        </figure>
-        <div style="display: flex; flex-wrap: wrap; gap: 1px; background: #D6CFBF; margin-top: 1px;">
-          <p style="flex: 1 1 170px; background: #F4F0E8; padding: 18px 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #6B655C;">3D BUILDINGS + TERRAIN</p>
-          <p style="flex: 1 1 170px; background: #F4F0E8; padding: 18px 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #6B655C;">PRESSURE SIMULATION</p>
-          <p style="flex: 1 1 170px; background: #F4F0E8; padding: 18px 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #6B655C;">PIPE BREAK / REPAIR</p>
-          <p style="flex: 1 1 170px; background: #F4F0E8; padding: 18px 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #6B655C;">BUILDING ISOLATION</p>
-          <p style="flex: 1 1 170px; background: #F4F0E8; padding: 18px 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #6B655C;">ROAD CLOSURE STATE</p>
-          <p style="flex: 1 1 170px; background: #F4F0E8; padding: 18px 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #D63A12;">CASE STUDY →</p>
-        </div>
-      </a>
-    </article>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 56px); margin-top: clamp(56px, 10vh, 120px);">
-      <article>
-        <a href="case.html#mantis" class="worklink" style="display: block;">
-          <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D63A12;">02</span>
-            <h3 style="font-size: clamp(30px, 4.6vw, 68px); font-weight: 700; line-height: 0.92; letter-spacing: -0.035em;">MANTIS</h3>
-          </div>
-          <p style="margin-top: 10px; font-size: clamp(16px, 1.5vw, 22px); font-weight: 500; letter-spacing: -0.01em;">Browser automation platform</p>
-          <div style="margin-top: 20px; aspect-ratio: 16 / 10; border: 1px solid #D6CFBF; background: #EBE6DB; overflow: hidden;">
-            <img src="assets/placeholder-mantis.svg" alt="Mantis" loading="lazy" style="width: 100%; height: 100%; object-fit: contain;">
-          </div>
-          <p style="margin-top: 18px; max-width: 48ch; font-size: 15px; line-height: 1.55; color: #4A453F;">Records a browser session once, then replays it as a parameterised workflow — scheduled, retried, logged and monitored from one dashboard.</p>
-          <p style="margin-top: 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;">NODE.JS · EXPRESS · PLAYWRIGHT · SQLITE</p>
-        </a>
-      </article>
-      <article>
-        <a href="case.html#winspark" class="worklink" style="display: block;">
-          <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D63A12;">03</span>
-            <h3 style="font-size: clamp(30px, 4.6vw, 68px); font-weight: 700; line-height: 0.92; letter-spacing: -0.035em;">WINSPARK</h3>
-          </div>
-          <p style="margin-top: 10px; font-size: clamp(16px, 1.5vw, 22px); font-weight: 500; letter-spacing: -0.01em;">Desktop automation engine</p>
-          <div style="margin-top: 20px; aspect-ratio: 16 / 10; border: 1px solid #D6CFBF; background: #EBE6DB; overflow: hidden;">
-            <img src="assets/placeholder-winspark.svg" alt="WinSpark" loading="lazy" style="width: 100%; height: 100%; object-fit: contain;">
-          </div>
-          <p style="margin-top: 18px; max-width: 48ch; font-size: 15px; line-height: 1.55; color: #4A453F;">Software controlling software: drives WhatsApp Desktop through the Windows accessibility tree, routes every message through a webhook, and persists state before each irreversible step so a crash can be recovered from.</p>
-          <p style="margin-top: 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;">PYTHON · WINDOWS UI AUTOMATION · MONGODB · PYSIDE6</p>
-        </a>
-      </article>
-    </div>
-    <article style="margin-top: clamp(56px, 10vh, 120px); padding-top: clamp(28px, 5vh, 56px); border-top: 1px solid #D6CFBF;">
-      <a href="case.html#green-ring" class="worklink" style="display: block;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(20px, 4vw, 56px); align-items: start;">
-          <div>
-            <div style="display: flex; align-items: baseline; gap: 14px;">
-              <span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D63A12;">04</span>
-              <h3 style="font-size: clamp(30px, 5.6vw, 84px); font-weight: 700; line-height: 0.9; letter-spacing: -0.04em;">GREEN RING</h3>
-            </div>
-            <p style="margin-top: 12px; font-size: clamp(16px, 1.6vw, 24px); font-weight: 500; letter-spacing: -0.012em;">WhatsApp automation &amp; messaging infrastructure</p>
-          </div>
-          <p style="max-width: 46ch; font-size: 15px; line-height: 1.55; color: #4A453F;">A FastAPI bridge over WhatsApp messaging rather than a chat client: authenticated send and media operations, validated configuration, and MongoDB Atlas archival of everything that passes through.</p>
-        </div>
-        <ul style="display: flex; flex-wrap: wrap; gap: 1px; background: #D6CFBF; margin-top: clamp(20px, 3vh, 32px); border: 1px solid #D6CFBF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6B655C;">
-          <li style="flex: 1 1 190px; background: #F4F0E8; padding: 16px 14px;">AUTH &amp; SESSION HANDLING</li>
-          <li style="flex: 1 1 190px; background: #F4F0E8; padding: 16px 14px;">MEDIA + SEND OPERATIONS</li>
-          <li style="flex: 1 1 190px; background: #F4F0E8; padding: 16px 14px;">MONGODB ATLAS ARCHIVAL</li>
-          <li style="flex: 1 1 190px; background: #F4F0E8; padding: 16px 14px;">RUNS AS A SERVICE</li>
-        </ul>
-        <div style="margin-top: clamp(22px, 4vh, 40px); height: clamp(160px, 26vh, 260px); border: 1px solid #D6CFBF; background: #EBE6DB; overflow: hidden;">
-          <img src="assets/placeholder-green-ring.svg" alt="Green Ring" loading="lazy" style="width: 100%; height: 100%; object-fit: contain;">
-        </div>
-      </a>
-    </article>
-
-    <article style="margin-top: clamp(56px, 10vh, 120px); padding-top: clamp(28px, 5vh, 56px); border-top: 1px solid #D6CFBF;">
-      <a href="case.html#pii" class="worklink" style="display: block;">
-        <div style="display: flex; align-items: baseline; gap: 14px;">
-          <span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D63A12;">05</span>
-          <h3 style="font-size: clamp(30px, 5.2vw, 76px); font-weight: 700; line-height: 0.9; letter-spacing: -0.04em;">AI PII DETECTOR</h3>
-        </div>
-        <p style="margin-top: 12px; font-size: clamp(16px, 1.6vw, 24px); font-weight: 500; letter-spacing: -0.012em;">Privacy detection &amp; data masking</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(20px, 3vw, 48px); margin-top: clamp(20px, 3vh, 32px);">
-          <p style="max-width: 46ch; font-size: 15px; line-height: 1.55; color: #4A453F;">Finds sensitive information before it becomes a problem. A hybrid regex and spaCy NLP pipeline reads PDF, DOCX, CSV, XLSX and TXT files, scores risk, then masks what it finds — in batch, from the CLI or the web app.</p>
-          <ul style="display: flex; flex-wrap: wrap; gap: 8px; align-content: start; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #6B655C;">
-            <li style="padding: 9px 12px; border: 1px solid #C9C1AE;">PDF</li>
-            <li style="padding: 9px 12px; border: 1px solid #C9C1AE;">DOCX</li>
-            <li style="padding: 9px 12px; border: 1px solid #C9C1AE;">CSV</li>
-            <li style="padding: 9px 12px; border: 1px solid #C9C1AE;">XLSX</li>
-            <li style="padding: 9px 12px; border: 1px solid #C9C1AE;">TXT</li>
-            <li style="padding: 9px 12px; border: 1px solid #C9C1AE;">REGEX + SPACY</li>
-            <li style="padding: 9px 12px; border: 1px solid #C9C1AE;">RISK SCORING</li>
-            <li style="padding: 9px 12px; border: 1px solid #C9C1AE;">BATCH / CLI</li>
-          </ul>
-        </div>
-      </a>
-    </article>
-
-    <article style="margin-top: clamp(56px, 10vh, 120px); padding-top: clamp(28px, 5vh, 56px); border-top: 1px solid #D6CFBF;">
-      <a href="case.html#atlas" class="worklink" style="display: block;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: clamp(20px, 4vw, 56px); align-items: end;">
-          <div>
-            <div style="display: flex; align-items: baseline; gap: 14px;">
-              <span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D63A12;">06</span>
-              <h3 style="font-size: clamp(30px, 5.6vw, 84px); font-weight: 700; line-height: 0.9; letter-spacing: -0.04em;">ATLAS</h3>
-            </div>
-            <p style="margin-top: 12px; font-size: clamp(16px, 1.6vw, 24px); font-weight: 500; letter-spacing: -0.012em;">Personal productivity system</p>
-          </div>
-          <p style="max-width: 46ch; font-size: 15px; line-height: 1.55; color: #4A453F;">Tasks, notes and time in one calm surface. The engineering sits underneath: one store abstraction serving either local storage or Supabase, optimistic mutations, realtime sync, and a PWA shell that works offline.</p>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: #D6CFBF; margin-top: clamp(22px, 4vh, 40px);">
-          <p style="background: #F4F0E8; padding: 16px 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #6B655C;">LOCAL / CLOUD ABSTRACTION</p>
-          <p style="background: #F4F0E8; padding: 16px 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #6B655C;">OPTIMISTIC MUTATIONS</p>
-          <p style="background: #F4F0E8; padding: 16px 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #6B655C;">REALTIME SYNC</p>
-          <p style="background: #F4F0E8; padding: 16px 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #6B655C;">ZUSTAND · SUPABASE</p>
-          <p style="background: #F4F0E8; padding: 16px 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #6B655C;">PWA + SHORTCUTS</p>
-        </div>
-      </a>
-    </article>
-
-    <div style="margin-top: clamp(56px, 10vh, 120px); padding-top: clamp(28px, 5vh, 56px); border-top: 1px solid #D6CFBF;">
-      <h3 style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #7F786D; font-weight: 400;">MORE BUILDS</h3>
-      <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: #D6CFBF; margin-top: clamp(20px, 3vh, 32px); border: 1px solid #D6CFBF;">
-        <li style="display: flex;"><a href="https://github.com/Varshith07827/SignalOps" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #F4F0E8; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-size: clamp(20px, 2vw, 28px); font-weight: 700; letter-spacing: -0.02em;">SIGNALOPS ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; line-height: 1.5; color: #6B655C;">Voice-of-Store engine: turns 40k messy multilingual store-feedback records into routed weekly actions and early-warning flags per region.</span><span style="display: block; margin-top: 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;">PYTHON · NLP · CLASSIFICATION</span></a></li>
-        <li style="display: flex;"><a href="https://github.com/Varshith07827/Glyphs" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #F4F0E8; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-size: clamp(20px, 2vw, 28px); font-weight: 700; letter-spacing: -0.02em;">GLYPH STUDIO ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; line-height: 1.5; color: #6B655C;">LED editor, battery indicator and charging effects for the Nothing Phone (3a) Glyph Interface. Per-LED brightness across all 36 LEDs.</span><span style="display: block; margin-top: 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;">KOTLIN · ANDROID</span></a></li>
-        <li style="display: flex;"><a href="https://github.com/Varshith07827/ebpf" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #F4F0E8; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-size: clamp(20px, 2vw, 28px); font-weight: 700; letter-spacing: -0.02em;">EBPF INSIGHT ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; line-height: 1.5; color: #6B655C;">Attributes latency to the specific process responsible by correlating kernel events. In progress: scheduler and CPU accounting slice working.</span><span style="display: block; margin-top: 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;">C · LIBBPF / CO-RE · GO</span></a></li>
-        <li style="display: flex;"><a href="https://github.com/Varshith07827/Keynote" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #F4F0E8; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-size: clamp(20px, 2vw, 28px); font-weight: 700; letter-spacing: -0.02em;">KEYNOTE ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; line-height: 1.5; color: #6B655C;">Typography wallpaper editor for Android and iOS: grab the lettering and it bends. Interactive deformation on a Skia canvas.</span><span style="display: block; margin-top: 14px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;">TYPESCRIPT · SKIA · REANIMATED</span></a></li>
+      <ul class="hero-links">
+        <li><a class="lk" href="https://github.com/Varshith07827" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a class="lk" href="https://www.linkedin.com/in/saivarshith-" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a class="lk" href="https://drive.google.com/file/d/1TyIl5IZtQ8gXd5CH3LH8my7f1z_xphY0/view?usp=sharing" target="_blank" rel="noopener">Résumé ↗</a></li>
+        <li><a class="lk mail" href="mailto:sandakavarshith@gmail.com">Email ↗</a></li>
       </ul>
     </div>
   </section>
 
-  <section id="experience" style="margin-top: clamp(72px, 14vh, 160px); padding-top: clamp(40px, 7vh, 88px); border-top: 1px solid #D6CFBF;">
-    <h2 style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #7F786D; font-weight: 400;">EXPERIENCE</h2>
-    <ol style="margin-top: clamp(28px, 5vh, 56px);">
-      <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(16px, 3vw, 48px); padding: clamp(24px, 4vh, 40px) 0; border-top: 1px solid #D6CFBF;">
+  <section id="work" class="sec">
+    <div class="sec-head"><h2>Selected work</h2><p class="label">Six systems · 01 — 06</p></div>
+    <ol class="index">
+      <li>
+        <a class="row feature" href="case.html#digitwin">
+          <span class="num">01</span>
+          <div>
+            <h3>DigiTwin</h3>
+            <p class="sub">City-scale digital twin &amp; infrastructure simulation</p>
+            <p class="desc">A 3D twin of central London built on real OpenStreetMap geometry, with the water network modelled as a graph you can break, isolate and repair to watch failure propagate.</p>
+            <ul class="chips"><li>3D buildings + terrain</li><li>Pressure simulation</li><li>Pipe break / repair</li><li>Building isolation</li><li>Road closure state</li></ul>
+            <span class="more">Read the case study →</span>
+          </div>
+          <figure class="thumb">
+            <img src="assets/digitwin-network.jpeg" alt="DigiTwin in a browser: 3D London buildings with road and water-network overlays beside a water simulation panel" loading="lazy">
+            <figcaption class="label"><span>Water network over OSM road graph</span><span>Cesium / Resium · FastAPI · NetworkX</span></figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="case.html#mantis">
+          <span class="num">02</span>
+          <div>
+            <h3>Mantis</h3>
+            <p class="sub">Browser automation platform</p>
+            <p class="desc">Records a browser session once, then replays it as a parameterised workflow — scheduled, retried, logged and monitored from one dashboard.</p>
+            <p class="tags">Node.js · Express · Playwright · SQLite</p>
+          </div>
+          <figure class="thumb"><img src="assets/placeholder-mantis.svg" alt="Mantis" loading="lazy"></figure>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="case.html#winspark">
+          <span class="num">03</span>
+          <div>
+            <h3>WinSpark</h3>
+            <p class="sub">Desktop automation engine</p>
+            <p class="desc">Software controlling software: drives WhatsApp Desktop through the Windows accessibility tree, routes every message through a webhook, and persists state before each irreversible step so a crash can be recovered from.</p>
+            <p class="tags">Python · Windows UI Automation · MongoDB · PySide6</p>
+          </div>
+          <figure class="thumb"><img src="assets/placeholder-winspark.svg" alt="WinSpark" loading="lazy"></figure>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="case.html#green-ring">
+          <span class="num">04</span>
+          <div>
+            <h3>Green Ring</h3>
+            <p class="sub">WhatsApp automation &amp; messaging infrastructure</p>
+            <p class="desc">A FastAPI bridge over WhatsApp messaging rather than a chat client: authenticated send and media operations, validated configuration, and MongoDB Atlas archival of everything that passes through.</p>
+            <p class="tags">Python · FastAPI · MongoDB Atlas · Runs as a service</p>
+          </div>
+          <figure class="thumb"><img src="assets/placeholder-green-ring.svg" alt="Green Ring" loading="lazy"></figure>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="case.html#pii">
+          <span class="num">05</span>
+          <div>
+            <h3>AI PII Detector</h3>
+            <p class="sub">Privacy detection &amp; data masking</p>
+            <p class="desc">Finds sensitive information before it becomes a problem. A hybrid regex and spaCy NLP pipeline reads PDF, DOCX, CSV, XLSX and TXT files, scores risk, then masks what it finds — in batch, from the CLI or the web app.</p>
+            <p class="tags">Python · Flask · Regex + spaCy · Risk scoring</p>
+          </div>
+          <figure class="thumb"><img src="assets/placeholder-pii.svg" alt="AI PII Detector" loading="lazy"></figure>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="case.html#atlas">
+          <span class="num">06</span>
+          <div>
+            <h3>Atlas</h3>
+            <p class="sub">Personal productivity system</p>
+            <p class="desc">Tasks, notes and time in one calm surface. The engineering sits underneath: one store abstraction serving either local storage or Supabase, optimistic mutations, realtime sync, and a PWA shell that works offline.</p>
+            <p class="tags">React · Zustand · Supabase · PWA</p>
+          </div>
+          <figure class="thumb"><img src="assets/placeholder-atlas.svg" alt="Atlas" loading="lazy"></figure>
+        </a>
+      </li>
+    </ol>
+
+    <div class="sub-head"><h3 class="label">More builds</h3></div>
+    <ul class="cards">
+      <li><a class="card" href="https://github.com/Varshith07827/SignalOps" target="_blank" rel="noopener"><h3>SignalOps ↗</h3><p>Voice-of-Store engine: turns 40k messy multilingual store-feedback records into routed weekly actions and early-warning flags per region.</p><p class="tags">Python · NLP · Classification</p></a></li>
+      <li><a class="card" href="https://github.com/Varshith07827/Glyphs" target="_blank" rel="noopener"><h3>Glyph Studio ↗</h3><p>LED editor, battery indicator and charging effects for the Nothing Phone (3a) Glyph Interface. Per-LED brightness across all 36 LEDs.</p><p class="tags">Kotlin · Android</p></a></li>
+      <li><a class="card" href="https://github.com/Varshith07827/ebpf" target="_blank" rel="noopener"><h3>eBPF Insight ↗</h3><p>Attributes latency to the specific process responsible by correlating kernel events. In progress: scheduler and CPU accounting slice working.</p><p class="tags">C · libbpf / CO-RE · Go</p></a></li>
+      <li><a class="card" href="https://github.com/Varshith07827/Keynote" target="_blank" rel="noopener"><h3>Keynote ↗</h3><p>Typography wallpaper editor for Android and iOS: grab the lettering and it bends. Interactive deformation on a Skia canvas.</p><p class="tags">TypeScript · Skia · Reanimated</p></a></li>
+    </ul>
+  </section>
+
+  <section id="experience" class="sec">
+    <div class="sec-head"><h2>Experience</h2></div>
+    <ol class="list-top">
+      <li class="job">
         <div>
-          <p style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #D63A12;">SEP 2025 — PRESENT</p>
-          <h3 style="margin-top: 10px; font-size: clamp(24px, 3vw, 42px); font-weight: 700; letter-spacing: -0.03em; line-height: 1;">BRAINYMED</h3>
-          <p style="margin-top: 6px; font-size: 15px; color: #6B655C;">Software Engineering Intern · Remote</p>
+          <p class="label gold">Sep 2025 — Present</p>
+          <h3>BrainyMed</h3>
+          <p class="role">Software Engineering Intern · Remote</p>
         </div>
-        <ul style="display: grid; gap: 10px; max-width: 58ch; font-size: 15px; line-height: 1.55; color: #4A453F;">
+        <ul>
           <li>Built end-to-end workflow automations with Playwright, Selenium and n8n, eliminating hundreds of hours of manual processing across client operations.</li>
           <li>Designed and deployed Python automation pipelines for real product workflows in a fully remote, cross-timezone team.</li>
           <li>Shipped production automation features autonomously — scoped, built, tested and delivered with minimal supervision.</li>
         </ul>
       </li>
-      <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(16px, 3vw, 48px); padding: clamp(24px, 4vh, 40px) 0; border-top: 1px solid #D6CFBF;">
+      <li class="job">
         <div>
-          <p style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #D63A12;">FEB 2025 — PRESENT</p>
-          <h3 style="margin-top: 10px; font-size: clamp(24px, 3vw, 42px); font-weight: 700; letter-spacing: -0.03em; line-height: 1;">NOVUS CLUB</h3>
-          <p style="margin-top: 6px; font-size: 15px; color: #6B655C;">Co-founder · Technical Lead, AI/ML &amp; Data Science</p>
+          <p class="label gold">Feb 2025 — Present</p>
+          <h3>Novus Club</h3>
+          <p class="role">Co-founder · Technical Lead, AI/ML &amp; Data Science</p>
         </div>
-        <ul style="display: grid; gap: 10px; max-width: 58ch; font-size: 15px; line-height: 1.55; color: #4A453F;">
+        <ul>
           <li>Co-founded the club from zero to an active community of 100+ members, running 10+ college hackathons and one national inter-college hackathon with participants from the IITs.</li>
           <li>Lead the AI/ML and data science division, shifting the culture from slide decks to shipped projects.</li>
           <li>Run weekly technical sessions on Python, ML, model deployment and modern AI tooling.</li>
           <li>Partnered with global platforms including Perplexity, via Comet, as Campus Partner.</li>
         </ul>
       </li>
-      <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(16px, 3vw, 48px); padding: clamp(24px, 4vh, 40px) 0; border-top: 1px solid #D6CFBF; border-bottom: 1px solid #D6CFBF;">
+      <li class="job">
         <div>
-          <p style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;">JUN — JUL 2025</p>
-          <h3 style="margin-top: 10px; font-size: clamp(24px, 3vw, 42px); font-weight: 700; letter-spacing: -0.03em; line-height: 1;">VAULTOFCODES</h3>
-          <p style="margin-top: 6px; font-size: 15px; color: #6B655C;">Python Programming Intern</p>
+          <p class="label">Jun — Jul 2025</p>
+          <h3>VaultOfCodes</h3>
+          <p class="role">Python Programming Intern</p>
         </div>
-        <ul style="display: grid; gap: 10px; max-width: 58ch; font-size: 15px; line-height: 1.55; color: #4A453F;">
+        <ul>
           <li>Wrote modular Python and integrated APIs into application features.</li>
           <li>Ran code reviews that cut post-deployment bugs by 25%, delivering with a remote team two weeks ahead of schedule.</li>
         </ul>
@@ -252,138 +177,102 @@
     </ol>
   </section>
 
-  <section aria-labelledby="eng-h" style="margin-top: clamp(72px, 14vh, 160px);">
-    <h2 id="eng-h" style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #7F786D; font-weight: 400;">HOW I BUILD</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: #D6CFBF; margin-top: clamp(28px, 5vh, 56px); border: 1px solid #D6CFBF;">
-      <div style="background: #F4F0E8; padding: clamp(20px, 3vw, 32px);">
-        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">AI / ML</h3>
-        <p style="margin-top: 12px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.9; color: #4A453F;">TensorFlow · OpenCV · YOLO · LangChain · spaCy · LLMs · prompt engineering · NLP</p>
-      </div>
-      <div style="background: #F4F0E8; padding: clamp(20px, 3vw, 32px);">
-        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">AUTOMATION</h3>
-        <p style="margin-top: 12px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.9; color: #4A453F;">Playwright · Selenium · n8n · Windows UI Automation · webhooks · schedulers · retries</p>
-      </div>
-      <div style="background: #F4F0E8; padding: clamp(20px, 3vw, 32px);">
-        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">BACKEND</h3>
-        <p style="margin-top: 12px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.9; color: #4A453F;">FastAPI · Flask · Node.js · Express · REST APIs · SQLAlchemy · auth &amp; RBAC</p>
-      </div>
-      <div style="background: #F4F0E8; padding: clamp(20px, 3vw, 32px);">
-        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">FRONTEND</h3>
-        <p style="margin-top: 12px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.9; color: #4A453F;">React · TypeScript · JavaScript · Zustand · Tailwind · Cesium / Resium · PWA</p>
-      </div>
-      <div style="background: #F4F0E8; padding: clamp(20px, 3vw, 32px);">
-        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">DATA</h3>
-        <p style="margin-top: 12px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.9; color: #4A453F;">Python · pandas · matplotlib · NetworkX · SQL · SQLite · MongoDB · Supabase · OpenStreetMap / Overpass</p>
-      </div>
-      <div style="background: #F4F0E8; padding: clamp(20px, 3vw, 32px);">
-        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">TOOLING</h3>
-        <p style="margin-top: 12px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.9; color: #4A453F;">Git · Cursor · Claude Code · v0 · Bolt · multithreading · testing · deployment</p>
-      </div>
-      <div style="background: #F4F0E8; padding: clamp(20px, 3vw, 32px);">
-        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">WHERE IDEAS START</h3>
-        <p style="margin-top: 12px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.9; color: #4A453F;">observation · situations · environment</p>
-      </div>
-      <div style="background: #F4F0E8; padding: clamp(20px, 3vw, 32px);">
-        <h3 style="font-size: clamp(17px, 1.5vw, 22px); font-weight: 700; letter-spacing: -0.01em;">INTEREST</h3>
-        <p style="margin-top: 12px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.9; color: #4A453F;">loads of free AI tools · computers &amp; machines</p>
-      </div>
+  <section class="sec" aria-labelledby="eng-h">
+    <div class="sec-head"><h2 id="eng-h">How I build</h2></div>
+    <div class="dl">
+      <div><h3>AI / ML</h3><p>TensorFlow · OpenCV · YOLO · LangChain · spaCy · LLMs · prompt engineering · NLP</p></div>
+      <div><h3>Automation</h3><p>Playwright · Selenium · n8n · Windows UI Automation · webhooks · schedulers · retries</p></div>
+      <div><h3>Backend</h3><p>FastAPI · Flask · Node.js · Express · REST APIs · SQLAlchemy · auth &amp; RBAC</p></div>
+      <div><h3>Frontend</h3><p>React · TypeScript · JavaScript · Zustand · Tailwind · Cesium / Resium · PWA</p></div>
+      <div><h3>Data</h3><p>Python · pandas · matplotlib · NetworkX · SQL · SQLite · MongoDB · Supabase · OpenStreetMap / Overpass</p></div>
+      <div><h3>Tooling</h3><p>Git · Cursor · Claude Code · v0 · Bolt · multithreading · testing · deployment</p></div>
+      <div><h3>Where ideas start</h3><p>observation · situations · environment</p></div>
+      <div><h3>Interest</h3><p>loads of free AI tools · computers &amp; machines</p></div>
     </div>
   </section>
 
-  <section aria-labelledby="rec-h" style="margin-top: clamp(72px, 14vh, 160px);">
-    <h2 id="rec-h" style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #7F786D; font-weight: 400;">BUILDING</h2>
-    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: clamp(20px, 3vw, 40px); margin-top: clamp(24px, 4vh, 44px); padding-top: clamp(20px, 3vh, 32px); border-top: 1px solid #D6CFBF;">
-      <li>
-        <p style="font-size: clamp(38px, 6vw, 76px); font-weight: 700; letter-spacing: -0.04em; line-height: 0.9;">9×</p>
-        <p style="margin-top: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B655C;">HACKATHON WINNER</p>
-      </li>
-      <li>
-        <p style="font-size: clamp(38px, 6vw, 76px); font-weight: 700; letter-spacing: -0.04em; line-height: 0.9;">10+</p>
-        <p style="margin-top: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B655C;">HACKATHONS ORGANISED</p>
-      </li>
-      <li>
-        <p style="font-size: clamp(38px, 6vw, 76px); font-weight: 700; letter-spacing: -0.04em; line-height: 0.9;">100+</p>
-        <p style="margin-top: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B655C;">MEMBERS UPSKILLED</p>
-      </li>
-      <li>
-        <p style="font-size: clamp(38px, 6vw, 76px); font-weight: 700; letter-spacing: -0.04em; line-height: 0.9;">6</p>
-        <p style="margin-top: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B655C;">SYSTEMS SHIPPED ABOVE</p>
-      </li>
+  <section class="sec" aria-labelledby="rec-h">
+    <div class="sec-head"><h2 id="rec-h">By the numbers</h2></div>
+    <ul class="figs">
+      <li><p class="fig-n">9×</p><p class="fig-l">Hackathon winner</p></li>
+      <li><p class="fig-n">10+</p><p class="fig-l">Hackathons organised</p></li>
+      <li><p class="fig-n">100+</p><p class="fig-l">Members upskilled</p></li>
+      <li><p class="fig-n">6</p><p class="fig-l">Systems shipped above</p></li>
     </ul>
   </section>
 
-  <section id="problem-solving" style="margin-top: clamp(72px, 14vh, 160px); padding-top: clamp(40px, 7vh, 88px); border-top: 1px solid #D6CFBF;">
-    <h2 style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #7F786D; font-weight: 400;">COMPETITIVE PROGRAMMING</h2>
+  <section id="problem-solving" class="sec">
+    <div class="sec-head"><h2>Problem solving</h2><p class="label">Competitive programming</p></div>
+    <p class="lead">The other side of building systems: breaking problems down.</p>
 
-    <p style="margin-top: clamp(24px, 4vh, 48px); max-width: 30ch; font-size: clamp(18px, 2vw, 30px); font-weight: 500; line-height: 1.3; letter-spacing: -0.015em;">The other side of building systems: breaking problems down.</p>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 1px; background: #D6CFBF; margin-top: clamp(32px, 6vh, 64px); border: 1px solid #D6CFBF;">
-      <div style="flex: 1 1 280px; background: #F4F0E8; padding: clamp(20px, 3vw, 32px);">
-        <p style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D63A12;">LEETCODE</p>
-        <div style="display: flex; align-items: baseline; gap: clamp(18px, 3.4vw, 36px); margin-top: 18px; flex-wrap: wrap;">
-          <div><p id="lc-solved" style="font-size: clamp(34px, 4.4vw, 60px); font-weight: 700; letter-spacing: -0.035em; line-height: 0.95;">453</p><p style="margin-top: 8px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6B655C;">SOLVED</p></div>
-          <div><p id="lc-rating" style="font-size: clamp(22px, 2.4vw, 32px); font-weight: 500; letter-spacing: -0.02em; line-height: 1; color: #6B655C;">1795</p><p style="margin-top: 8px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;">CURRENT RATING</p></div>
-          <div><p id="lc-max-rating" style="font-size: clamp(22px, 2.4vw, 32px); font-weight: 500; letter-spacing: -0.02em; line-height: 1; color: #6B655C;">1795</p><p style="margin-top: 8px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;">MAX RATING</p></div>
+    <div class="ledger">
+      <article class="panel">
+        <p class="label gold">LeetCode</p>
+        <div><p class="big" id="lc-solved">521</p><p class="fig-l" style="margin-top:8px">Problems solved</p></div>
+        <div class="pair">
+          <div><p class="n" id="lc-rating">1859</p><p class="l">Current rating</p></div>
+          <div><p class="n" id="lc-max-rating">1859</p><p class="l">Max rating</p></div>
+          <div><p class="n"><span id="lc-contests">20</span></p><p class="l">Contests</p></div>
         </div>
-        <p style="margin-top: 20px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;"><span id="lc-contests">16</span> CONTESTS</p>
-      </div>
-      <div style="flex: 1 1 280px; background: #F4F0E8; padding: clamp(20px, 3vw, 32px);">
-        <p style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D63A12;">CODECHEF <span id="cc-stars">★★★★★</span></p>
-        <div style="display: flex; align-items: baseline; gap: clamp(20px, 4vw, 44px); margin-top: 18px; flex-wrap: wrap;">
-          <div><p id="cc-rating" style="font-size: clamp(34px, 4.4vw, 60px); font-weight: 700; letter-spacing: -0.035em; line-height: 0.95;">2017</p><p style="margin-top: 8px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6B655C;">CURRENT RATING</p></div>
-          <div><p id="cc-max-rating" style="font-size: clamp(22px, 2.4vw, 32px); font-weight: 500; letter-spacing: -0.02em; line-height: 1; color: #6B655C;">2192</p><p style="margin-top: 8px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;">MAX RATING</p></div>
+      </article>
+      <article class="panel">
+        <p class="label gold">CodeChef <span id="cc-stars">★★★★★</span></p>
+        <div><p class="big" id="cc-rating">2017</p><p class="fig-l" style="margin-top:8px">Current rating</p></div>
+        <div class="pair">
+          <div><p class="n" id="cc-max-rating">2192</p><p class="l">Max rating</p></div>
+          <div><p class="n"><span id="cc-contests">9</span></p><p class="l">Contests</p></div>
         </div>
-        <p style="margin-top: 20px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #7F786D;"><span id="cc-contests">9</span> CONTESTS</p>
-      </div>
-      <div style="flex: 1 1 280px; background: #F4F0E8; padding: clamp(20px, 3vw, 32px); display: flex; flex-direction: column; justify-content: space-between; gap: 18px;">
-        <p style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D63A12;">MOST RECENT CONTEST</p>
+      </article>
+      <article class="panel">
+        <p class="label gold">Most recent contest</p>
         <div>
-          <p id="mrc-title" style="font-size: clamp(20px, 2.2vw, 28px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.1;">LEETCODE WEEKLY 518</p>
-          <p id="mrc-meta" style="margin-top: 12px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6B655C;">06 SEP 2026 · RANK 233</p>
+          <p class="big" style="font-size: clamp(1.7rem, 2.6vw, 2.3rem); line-height: 1.1;" id="mrc-title">LEETCODE · WEEKLY CONTEST 526</p>
+          <p class="fig-l" id="mrc-meta">01 NOV 2026 · RANK 2863</p>
         </div>
+      </article>
+    </div>
+    <p id="stats-updated" class="label updated"></p>
+
+    <div class="two">
+      <div>
+        <h3 class="label">Contests by platform</h3>
+        <ul class="split">
+          <li id="cbp-lc-bar" style="width: 69%;"></li>
+          <li id="cbp-cc-bar" style="width: 31%;"></li>
+        </ul>
+        <ul class="rows">
+          <li><span>LeetCode</span><span class="v" id="cbp-lc-count">20</span></li>
+          <li><span>CodeChef</span><span class="v" id="cbp-cc-count">9</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="label">LeetCode by difficulty — <span id="lc-total-label">521</span> total</h3>
+        <ul class="bars">
+          <li><div class="t"><span>Easy</span><span class="v" id="lc-easy">253</span></div><div class="bar"><i id="lc-easy-bar" style="width: 100%;"></i></div></li>
+          <li><div class="t"><span>Medium</span><span class="v" id="lc-medium">203</span></div><div class="bar"><i id="lc-medium-bar" style="width: 80%;"></i></div></li>
+          <li><div class="t"><span>Hard</span><span class="v" id="lc-hard">65</span></div><div class="bar"><i id="lc-hard-bar" style="width: 26%;"></i></div></li>
+        </ul>
       </div>
     </div>
-    <p id="stats-updated" style="margin-top: 16px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #A29B8D;"></p>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 5vw, 64px); margin-top: clamp(40px, 7vh, 80px);">
-      <div>
-        <h3 style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: #7F786D; font-weight: 400;">CONTESTS BY PLATFORM</h3>
-        <ul style="display: flex; gap: 2px; margin-top: 18px;">
-          <li id="cbp-lc-bar" style="height: 10px; background: #D63A12; width: 69%;"></li>
-          <li id="cbp-cc-bar" style="height: 10px; background: #F2B8A8; width: 31%;"></li>
-        </ul>
-        <ul style="display: grid; gap: 10px; margin-top: 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #4A453F;">
-          <li style="display: flex; justify-content: space-between; gap: 16px; padding-bottom: 10px; border-bottom: 1px solid #D6CFBF;"><span>LEETCODE</span><span id="cbp-lc-count" style="color: #151311;">20</span></li>
-          <li style="display: flex; justify-content: space-between; gap: 16px; padding-bottom: 10px; border-bottom: 1px solid #D6CFBF;"><span>CODECHEF</span><span id="cbp-cc-count" style="color: #151311;">9</span></li>
-        </ul>
-      </div>
-      <div>
-        <h3 style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: #7F786D; font-weight: 400;">LEETCODE BY DIFFICULTY — <span id="lc-total-label">453</span> TOTAL</h3>
-        <ul style="display: grid; gap: 14px; margin-top: 18px;">
-          <li><div style="display: flex; justify-content: space-between; gap: 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #4A453F;"><span>EASY</span><span id="lc-easy" style="color: #151311;">237</span></div><div style="height: 2px; background: #D6CFBF; margin-top: 8px;"><div id="lc-easy-bar" style="height: 2px; background: #7F786D; width: 100%;"></div></div></li>
-          <li><div style="display: flex; justify-content: space-between; gap: 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #4A453F;"><span>MEDIUM</span><span id="lc-medium" style="color: #151311;">164</span></div><div style="height: 2px; background: #D6CFBF; margin-top: 8px;"><div id="lc-medium-bar" style="height: 2px; background: #7F786D; width: 69%;"></div></div></li>
-          <li><div style="display: flex; justify-content: space-between; gap: 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #4A453F;"><span>HARD</span><span id="lc-hard" style="color: #151311;">52</span></div><div style="height: 2px; background: #D6CFBF; margin-top: 8px;"><div id="lc-hard-bar" style="height: 2px; background: #7F786D; width: 22%;"></div></div></li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 style="margin-top: clamp(40px, 7vh, 80px); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: #7F786D; font-weight: 400;">PROFILES</h3>
-    <ul style="display: flex; flex-wrap: wrap; gap: 1px; background: #D6CFBF; margin-top: 18px; border: 1px solid #D6CFBF;">
-      <li style="flex: 1 1 230px; display: flex;"><a href="https://leetcode.com/u/Vince7827/" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #F4F0E8; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">LEETCODE ↗</span><span id="tile-lc-meta" style="display: block; margin-top: 10px; font-size: 14px; color: #6B655C;">1784 rating · 20 contests</span></a></li>
-      <li style="flex: 1 1 230px; display: flex;"><a href="https://www.codechef.com/users/vince7827" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #F4F0E8; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">CODECHEF ↗</span><span id="tile-cc-meta" style="display: block; margin-top: 10px; font-size: 14px; color: #6B655C;">5★ · 2017 rating · 9 contests</span></a></li>
-      <li style="flex: 1 1 230px; display: flex;"><a href="https://github.com/Varshith07827" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #F4F0E8; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">GITHUB ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; color: #6B655C;">Source for every project here</span></a></li>
-      <li style="flex: 1 1 230px; display: flex;"><a href="https://www.geeksforgeeks.org/profile/alonewalker07827" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #F4F0E8; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">GEEKSFORGEEKS ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; color: #6B655C;">Profile</span></a></li>
-      <li style="flex: 1 1 230px; display: flex;"><a href="https://www.hackerrank.com/profile/alonewalker07827" target="_blank" rel="noopener" class="contacttile" style="flex: 1; background: #F4F0E8; padding: clamp(18px, 2.6vw, 26px); display: block;"><span style="display: block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em;">HACKERRANK ↗</span><span style="display: block; margin-top: 10px; font-size: 14px; color: #6B655C;">5★ · 308 problems</span></a></li>
+    <h3 class="label" style="margin-top: clamp(40px, 7vh, 80px);">Profiles</h3>
+    <ul class="plist">
+      <li><a href="https://leetcode.com/u/Vince7827/" target="_blank" rel="noopener"><span class="nm">LeetCode ↗</span><span class="meta" id="tile-lc-meta">1859 rating · 20 contests</span></a></li>
+      <li><a href="https://www.codechef.com/users/vince7827" target="_blank" rel="noopener"><span class="nm">CodeChef ↗</span><span class="meta" id="tile-cc-meta">5★ · 2017 rating · 9 contests</span></a></li>
+      <li><a href="https://github.com/Varshith07827" target="_blank" rel="noopener"><span class="nm">GitHub ↗</span><span class="meta">Source for every project here</span></a></li>
+      <li><a href="https://www.geeksforgeeks.org/profile/alonewalker07827" target="_blank" rel="noopener"><span class="nm">GeeksforGeeks ↗</span><span class="meta">Profile</span></a></li>
+      <li><a href="https://www.hackerrank.com/profile/alonewalker07827" target="_blank" rel="noopener"><span class="nm">HackerRank ↗</span><span class="meta">5★ · 308 problems</span></a></li>
     </ul>
   </section>
 
-  <section id="about" style="margin-top: clamp(72px, 14vh, 160px); padding-top: clamp(40px, 7vh, 88px); border-top: 1px solid #D6CFBF;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(24px, 5vw, 72px);">
-      <h2 style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: #7F786D; font-weight: 400;">ABOUT</h2>
-      <div style="grid-column: span 2; min-width: 0;">
-        <p style="max-width: 60ch; font-size: clamp(18px, 2vw, 30px); font-weight: 500; line-height: 1.3; letter-spacing: -0.015em;">I build systems that ship — not prototypes that collect stars.</p>
-        <div style="display: grid; gap: 18px; margin-top: 24px; max-width: 62ch; font-size: clamp(15px, 1.2vw, 18px); line-height: 1.6; color: #4A453F;">
-          <p>Most of what I make sits somewhere between AI, systems and automation: things that drive other software, model infrastructure, or read documents nobody wants to read. I learn by building, and the projects on this page are how I got here.</p>
+  <section id="about" class="sec">
+    <div class="sec-head"><h2>About</h2></div>
+    <div class="about">
+      <p class="label">The short version</p>
+      <div>
+        <p class="pull">I build systems that ship — not prototypes that collect stars.</p>
+        <div class="prose">
+          <p class="dropcap">Most of what I make sits somewhere between AI, systems and automation: things that drive other software, model infrastructure, or read documents nobody wants to read. I learn by building, and the projects on this page are how I got here.</p>
           <p>I'm a dual-degree student — B.Tech in Computer Science at GVPCDPGC and B.Sc in Data Science &amp; Programming at IIT Madras — currently interning remotely as a software engineer at BrainyMed, where the work is workflow automation and end-to-end systems.</p>
           <p>I move fast on new tooling, but I still build foundations from scratch when it matters.</p>
         </div>
@@ -391,30 +280,19 @@
     </div>
   </section>
 
-  <section id="contact" style="margin: clamp(72px, 14vh, 160px) 0 clamp(48px, 8vh, 96px); padding-top: clamp(40px, 7vh, 88px); border-top: 1px solid #D6CFBF;">
-    <h2 style="font-size: clamp(40px, 11.5vw, 164px); font-weight: 700; line-height: 0.86; letter-spacing: -0.045em;">BUILD SOMETHING<br><span style="color: #D63A12;">USEFUL.</span></h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 1px; background: #D6CFBF; margin-top: clamp(32px, 6vh, 72px); border: 1px solid #D6CFBF;">
-      <a href="mailto:sandakavarshith@gmail.com" class="contacttile" style="flex: 1 1 220px; background: #F4F0E8; padding: clamp(20px, 3vw, 28px); display: block;">
-        <span style="display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #7F786D;">EMAIL</span>
-        <span style="display: block; margin-top: 10px; font-size: clamp(14px, 1.1vw, 17px); word-break: break-word;">sandakavarshith@gmail.com</span>
-      </a>
-      <a href="https://github.com/Varshith07827" target="_blank" rel="noopener" class="contacttile" style="flex: 1 1 220px; background: #F4F0E8; padding: clamp(20px, 3vw, 28px); display: block;">
-        <span style="display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #7F786D;">GITHUB</span>
-        <span style="display: block; margin-top: 10px; font-size: clamp(14px, 1.1vw, 17px);">Varshith07827 ↗</span>
-      </a>
-      <a href="https://www.linkedin.com/in/saivarshith-" target="_blank" rel="noopener" class="contacttile" style="flex: 1 1 220px; background: #F4F0E8; padding: clamp(20px, 3vw, 28px); display: block;">
-        <span style="display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #7F786D;">LINKEDIN</span>
-        <span style="display: block; margin-top: 10px; font-size: clamp(14px, 1.1vw, 17px);">saivarshith- ↗</span>
-      </a>
-      <a href="https://drive.google.com/file/d/1TyIl5IZtQ8gXd5CH3LH8my7f1z_xphY0/view?usp=sharing" target="_blank" rel="noopener" class="contacttile" style="flex: 1 1 220px; background: #F4F0E8; padding: clamp(20px, 3vw, 28px); display: block;">
-        <span style="display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #7F786D;">RÉSUMÉ</span>
-        <span style="display: block; margin-top: 10px; font-size: clamp(14px, 1.1vw, 17px);">PDF ↗</span>
-      </a>
-    </div>
-    <p style="margin-top: clamp(28px, 5vh, 48px); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #A29B8D;">VENKATA SAI VARSHITH SANDAKA · VISAKHAPATNAM, INDIA · +91 79811 49423</p>
+  <section id="contact" class="sec">
+    <div class="sec-head"><h2>Contact</h2></div>
+    <p class="sign">Build something <em>useful.</em></p>
+    <ul class="plist" style="margin-top: clamp(28px, 5vh, 56px);">
+      <li><a href="mailto:sandakavarshith@gmail.com"><span class="nm">Email</span><span class="meta">sandakavarshith@gmail.com</span></a></li>
+      <li><a href="https://github.com/Varshith07827" target="_blank" rel="noopener"><span class="nm">GitHub ↗</span><span class="meta">Varshith07827</span></a></li>
+      <li><a href="https://www.linkedin.com/in/saivarshith-" target="_blank" rel="noopener"><span class="nm">LinkedIn ↗</span><span class="meta">saivarshith-</span></a></li>
+      <li><a href="https://drive.google.com/file/d/1TyIl5IZtQ8gXd5CH3LH8my7f1z_xphY0/view?usp=sharing" target="_blank" rel="noopener"><span class="nm">Résumé ↗</span><span class="meta">PDF</span></a></li>
+    </ul>
+    <p class="foot">Venkata Sai Varshith Sandaka · Visakhapatnam, India · +91 79811 49423</p>
   </section>
 </main>
-</div>
+
 <script>
 (function () {
   function fmtDate(iso) {
@@ -529,11 +407,11 @@
 
     var toast = document.createElement("div");
     toast.id = "visit-toast";
-    toast.style.cssText = "position: fixed; bottom: 24px; right: 24px; z-index: 9999; background: #F4F0E8; border: 1px solid #D63A12; padding: clamp(18px, 2.6vw, 26px); font-family: 'Bricolage Grotesque', system-ui, sans-serif; color: #151311; opacity: 0; transform: translateY(8px); transition: opacity 0.3s ease, transform 0.3s ease; max-width: 260px;";
+    toast.style.cssText = "position: fixed; bottom: 24px; right: 24px; z-index: 9999; background: #18261F; border: 1px solid #E0B25A; padding: clamp(18px, 2.6vw, 26px); font-family: 'Fraunces', Georgia, serif; color: #F1EADA; opacity: 0; transform: translateY(8px); transition: opacity 0.3s ease, transform 0.3s ease; max-width: 260px;";
     var value = visitCount === null ? "—" : visitCount.toLocaleString();
     toast.innerHTML =
-      '<p style="font-size: 40px; font-weight: 700; letter-spacing: -0.03em; line-height: 0.95; color: #D63A12;">' + value + '</p>' +
-      '<p style="margin-top: 8px; font-family: \'DM Mono\', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6B655C;">SITE VISITS SINCE LAUNCH</p>';
+      '<p style="font-size: 40px; font-weight: 300; letter-spacing: -0.03em; line-height: 0.95; color: #E0B25A;">' + value + '</p>' +
+      '<p style="margin-top: 8px; font-family: \'Newsreader\', Georgia, serif; font-size: 10px; letter-spacing: 0.14em; color: #98A194;">SITE VISITS SINCE LAUNCH</p>';
     document.body.appendChild(toast);
     requestAnimationFrame(function () {
       toast.style.opacity = "1";
@@ -547,5 +425,6 @@
   }
 })();
 </script>
+
 </body>
 </html>
