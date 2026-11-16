@@ -2,429 +2,370 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Venkata Sai Varshith — AI / Systems / Automation</title>
-<meta name="description" content="Venkata Sai Varshith — AI, systems and automation engineer. City-scale simulation, browser and desktop automation, and AI tooling that handles real work.">
-<meta name="theme-color" content="#121D18">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Venkata Sai Varshith — AI, Systems &amp; Automation</title>
+<meta name="description" content="Venkata Sai Varshith — engineer of AI, systems and automation. City-scale simulation, browser and desktop automation, and tooling that handles real work. Visakhapatnam, India.">
+<meta name="theme-color" content="#1A100B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231A100B'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='44' font-style='italic' font-family='Georgia,serif' fill='%23CDA960'%3EV%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
+<script>
+  document.documentElement.classList.add('js');
+  try { if (sessionStorage.getItem('sv_curtain')) document.documentElement.classList.add('arriving'); } catch (e) {}
+  // failsafe: never trap a visitor behind the loader if a library fails to load
+  setTimeout(function () { var l = document.getElementById('loader'); if (l && !window.__svReady) { l.remove(); document.body.classList.remove('is-loading'); } }, 9000);
+</script>
 </head>
-<body>
+<body class="is-loading">
 
-<header class="mast">
-  <div class="wrap">
-    <a class="mast-mark" href="#top">Varshith</a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#problem-solving">Problems</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg class="loader-ring" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="94" fill="none" stroke="#CDA960" stroke-opacity=".28" stroke-width="1"/>
+      <circle class="draw" cx="100" cy="100" r="94" fill="none" stroke="#CDA960" stroke-width="1.4" stroke-dasharray="591" stroke-dashoffset="591" transform="rotate(-90 100 100)"/>
+      <g class="ticks" stroke="#CDA960" stroke-width="1"></g>
+    </svg>
+    <span class="loader-mono">V</span>
   </div>
+  <p class="loader-tag">Maison Varshith — Édition MMXXVI</p>
+  <p class="loader-count"><span id="lc">0</span></p>
+</div>
+<div class="curtain" aria-hidden="true"><span class="curtain-mono">V</span></div>
+<div class="progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="peek" aria-hidden="true" id="peek"></div>
+
+<header class="nav" id="nav">
+  <a class="nav-mark" href="#top" aria-label="Back to top">V. S. Varshith</a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#work">Atelier</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#metier">Métier</a>
+    <a href="#epreuves">Épreuves</a>
+    <a href="#portrait">Portrait</a>
+    <a href="#contact">Écrire</a>
+  </nav>
+  <button class="nav-btn" id="menuBtn" aria-label="Open menu">Menu</button>
 </header>
+<div class="menu" id="menu" aria-label="Menu">
+  <button class="menu-close" id="menuClose">Fermer ✕</button>
+  <a href="#work"><span><em>I</em>Atelier</span></a>
+  <a href="#parcours"><span><em>II</em>Parcours</span></a>
+  <a href="#metier"><span><em>III</em>Métier</span></a>
+  <a href="#epreuves"><span><em>IV</em>Épreuves</span></a>
+  <a href="#portrait"><span><em>V</em>Portrait</span></a>
+  <a href="#contact"><span><em>VI</em>Écrire</span></a>
+</div>
 
-<main id="top" class="wrap">
+<main id="top">
 
+  <!-- ═════════════ hero ═════════════ -->
   <section class="hero" aria-label="Introduction">
-    <p class="label">Visakhapatnam, India — Selected work, 2026</p>
-    <h1 class="hero-name">Venkata Sai <em>Varshith</em></h1>
-    <div class="hero-foot">
-      <div>
-        <p class="dek">I build software that does more than sit on a screen — city-scale simulation, automation engines that drive other software, and AI tooling that handles real work.</p>
-        <p class="label dek-sub">AI <span class="gold">/</span> Systems <span class="gold">/</span> Automation</p>
+    <div class="hero-stage">
+      <div class="hero-meta">
+        <span><span class="rv">Portfolio — Édition MMXXVI · N° 1</span></span>
+        <span><span class="rv">Visakhapatnam <b data-clock="Asia/Kolkata">--:--</b> &nbsp;·&nbsp; Paris <b data-clock="Europe/Paris">--:--</b></span></span>
       </div>
-      <ul class="hero-links">
-        <li><a class="lk" href="https://github.com/Varshith07827" target="_blank" rel="noopener">GitHub ↗</a></li>
-        <li><a class="lk" href="https://www.linkedin.com/in/saivarshith-" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-        <li><a class="lk" href="https://drive.google.com/file/d/1TyIl5IZtQ8gXd5CH3LH8my7f1z_xphY0/view?usp=sharing" target="_blank" rel="noopener">Résumé ↗</a></li>
-        <li><a class="lk mail" href="mailto:sandakavarshith@gmail.com">Email ↗</a></li>
+      <h1 class="hero-title" aria-label="Venkata Sai Varshith">
+        <span class="line"><span class="inner">Venkata Sai</span></span>
+        <span class="line"><span class="inner"><em>Varshith</em></span></span>
+      </h1>
+      <p class="hero-dek"><span class="rv" style="display:block">Software that does more than sit on a screen — city-scale simulation, automation engines and AI tooling that handles real work.</span></p>
+      <div class="hero-dial">
+        <div class="dial-in">
+          <svg id="dial" class="dial" role="img" aria-label="An analogue wristwatch dial showing the current time in Visakhapatnam, with Paris time on the sub-dial"></svg>
+        </div>
+      </div>
+      <div class="hero-cue"><span class="rv">Faites défiler</span><i></i></div>
+      <div class="iris"></div>
+    </div>
+  </section>
+
+  <!-- ═════════════ credo ═════════════ -->
+  <section class="manifesto dark" data-nav id="manifesto">
+    <div class="wrap">
+      <p class="eyebrow">Profession de foi</p>
+      <p class="manifesto-quote" id="credo">I build systems that ship — not prototypes that collect <em>stars.</em></p>
+      <div class="manifesto-foot" data-fade>
+        <p class="lead">Most of what I make sits somewhere between AI, systems and automation: things that drive other software, model infrastructure, or read documents nobody wants to read.</p>
+        <p>I learn by building, and the pieces on this page are how I got here. I move fast on new tooling, but I still build foundations from scratch when it matters.</p>
+      </div>
+    </div>
+  </section>
+  <section class="mq dark" data-nav aria-hidden="true" id="mq">
+    <div class="mq-track">
+      <div class="mq-group">
+        <span class="mq-item fill">Artificial Intelligence</span><i class="mq-star"></i>
+        <span class="mq-item">Browser Automation</span><i class="mq-star"></i>
+        <span class="mq-item fill">Digital Twins</span><i class="mq-star"></i>
+        <span class="mq-item">Desktop Automation</span><i class="mq-star"></i>
+        <span class="mq-item fill">Infrastructure</span><i class="mq-star"></i>
+        <span class="mq-item">Machine Learning</span><i class="mq-star"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════ atelier ═════════════ -->
+  <section class="sec" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">N° I — L’Atelier</p>
+          <h2 class="h2" id="work-h" data-split>Selected <em>work</em></h2>
+        </div>
+        <p class="sec-note" data-fade>Six pieces, each photographed running. Hover to preview; open one to read the dossier.</p>
+      </div>
+      <ol class="work-list" id="workList"></ol>
+
+      <div class="carnet">
+        <h3 data-fade>Le Carnet <span class="it">— and more on the shelf</span></h3>
+        <ul class="carnet-list" data-stagger>
+          <li><a class="carnet-item" href="https://github.com/Varshith07827/SignalOps" target="_blank" rel="noopener"><div class="leader"><b>SignalOps ↗</b><i></i><span>Python · NLP</span></div><p>Voice-of-Store engine: turns 40k messy multilingual store-feedback records into routed weekly actions and early-warning flags per region.</p></a></li>
+          <li><a class="carnet-item" href="https://github.com/Varshith07827/Glyphs" target="_blank" rel="noopener"><div class="leader"><b>Glyph Studio ↗</b><i></i><span>Kotlin · Android</span></div><p>LED editor, battery indicator and charging effects for the Nothing Phone (3a) Glyph Interface — per-LED brightness across all 36 LEDs.</p></a></li>
+          <li><a class="carnet-item" href="https://github.com/Varshith07827/ebpf" target="_blank" rel="noopener"><div class="leader"><b>eBPF Insight ↗</b><i></i><span>C · Go</span></div><p>Attributes latency to the specific process responsible by correlating kernel events. In progress: the scheduler and CPU-accounting slice works.</p></a></li>
+          <li><a class="carnet-item" href="https://github.com/Varshith07827/Keynote" target="_blank" rel="noopener"><div class="leader"><b>Keynote ↗</b><i></i><span>TypeScript · Skia</span></div><p>Typography wallpaper editor for Android and iOS: grab the lettering and it bends. Interactive deformation on a Skia canvas.</p></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════ parcours ═════════════ -->
+  <section class="sec dark" data-nav id="parcours" aria-labelledby="par-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">N° II — Parcours</p>
+          <h2 class="h2" id="par-h" data-split>Where I have <em>worked</em></h2>
+        </div>
+      </div>
+      <ol>
+        <li class="job" data-fade>
+          <div>
+            <p class="job-when">September 2025 — present</p>
+            <h3 class="job-org">BrainyMed</h3>
+            <p class="job-role">Software Engineering Intern · Remote</p>
+          </div>
+          <ul>
+            <li>Built end-to-end workflow automations with Playwright, Selenium and n8n, eliminating hundreds of hours of manual processing across client operations.</li>
+            <li>Designed and deployed Python automation pipelines for real product workflows in a fully remote, cross-timezone team.</li>
+            <li>Shipped production automation features autonomously — scoped, built, tested and delivered with minimal supervision.</li>
+          </ul>
+        </li>
+        <li class="job" data-fade>
+          <div>
+            <p class="job-when">February 2025 — present</p>
+            <h3 class="job-org">Novus Club</h3>
+            <p class="job-role">Co-founder · Technical Lead, AI/ML &amp; Data Science</p>
+          </div>
+          <ul>
+            <li>Co-founded the club from zero to an active community of 100+ members, running 10+ college hackathons and one national inter-college hackathon with participants from the IITs.</li>
+            <li>Lead the AI/ML and data science division, shifting the culture from slide decks to shipped projects.</li>
+            <li>Run weekly technical sessions on Python, ML, model deployment and modern AI tooling.</li>
+            <li>Partnered with global platforms including Perplexity, via Comet, as Campus Partner.</li>
+          </ul>
+        </li>
+        <li class="job" data-fade style="border-bottom: 1px solid var(--line);">
+          <div>
+            <p class="job-when">June — July 2025</p>
+            <h3 class="job-org">VaultOfCodes</h3>
+            <p class="job-role">Python Programming Intern</p>
+          </div>
+          <ul>
+            <li>Wrote modular Python and integrated APIs into application features.</li>
+            <li>Ran code reviews that cut post-deployment bugs by 25%, delivering with a remote team two weeks ahead of schedule.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═════════════ métier ═════════════ -->
+  <section class="sec" id="metier" aria-labelledby="met-h">
+    <div class="wrap metier">
+      <div class="metier-head">
+        <p class="eyebrow">N° III — Le Métier</p>
+        <h2 class="h2" id="met-h" style="margin-top:22px" data-split>How I <em>build</em></h2>
+        <p data-fade>A working kit, kept deliberately small, and sharpened by use.</p>
+      </div>
+      <ol class="craft" data-stagger>
+        <li><span class="rn">I.</span><h3>AI / ML</h3><p>TensorFlow · OpenCV · YOLO · LangChain · spaCy · LLMs · prompt engineering · NLP</p></li>
+        <li><span class="rn">II.</span><h3>Automation</h3><p>Playwright · Selenium · n8n · Windows UI Automation · webhooks · schedulers · retries</p></li>
+        <li><span class="rn">III.</span><h3>Backend</h3><p>FastAPI · Flask · Node.js · Express · REST APIs · SQLAlchemy · auth &amp; RBAC</p></li>
+        <li><span class="rn">IV.</span><h3>Frontend</h3><p>React · TypeScript · JavaScript · Zustand · Tailwind · Cesium / Resium · PWA</p></li>
+        <li><span class="rn">V.</span><h3>Data</h3><p>Python · pandas · matplotlib · NetworkX · SQL · SQLite · MongoDB · Supabase · OpenStreetMap / Overpass</p></li>
+        <li><span class="rn">VI.</span><h3>Tooling</h3><p>Git · Cursor · Claude Code · v0 · Bolt · multithreading · testing · deployment</p></li>
+        <li><span class="rn">VII.</span><h3>Where ideas start</h3><p>Observation · situations · environment</p></li>
+        <li><span class="rn">VIII.</span><h3>Interests</h3><p>Loads of free AI tools · computers &amp; machines</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═════════════ épreuves ═════════════ -->
+  <section class="sec dark" data-nav id="epreuves" aria-labelledby="ep-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">N° IV — Les Épreuves</p>
+          <h2 class="h2" id="ep-h" data-split>Breaking problems <em>down</em></h2>
+        </div>
+        <p class="sec-note" data-fade>The other side of building systems. Figures below are pulled live from LeetCode and CodeChef.</p>
+      </div>
+
+      <article class="cert" data-fade>
+        <header class="cert-head">
+          <p class="eyebrow">Relevé certifié</p>
+          <h3>Competitive Programming</h3>
+          <p>Ratings, volume and the latest contest — as recorded.</p>
+        </header>
+        <div class="ledger">
+          <div>
+            <p class="k">LeetCode</p>
+            <p class="big" data-stat="leetcode.totalSolved">521</p>
+            <p class="cap">problems solved</p>
+            <div class="pairs">
+              <div><p class="n" data-stat="leetcode.contestRating">1859</p><p class="l">rating</p></div>
+              <div><p class="n" data-stat="leetcode.maxContestRating">1859</p><p class="l">peak</p></div>
+              <div><p class="n" data-stat="leetcode.contestsAttended">20</p><p class="l">contests</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="k">CodeChef <span id="cc-stars">★★★★★</span></p>
+            <p class="big" data-stat="codechef.currentRating">2017</p>
+            <p class="cap">current rating</p>
+            <div class="pairs">
+              <div><p class="n" data-stat="codechef.highestRating">2192</p><p class="l">peak</p></div>
+              <div><p class="n" data-stat="codechef.contestsAttended">9</p><p class="l">contests</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="k">Most recent contest</p>
+            <p class="recent" id="mrc-title">LeetCode · Weekly Contest 526</p>
+            <p class="cap" id="mrc-meta">01 Nov 2026 · rank 2863</p>
+          </div>
+        </div>
+
+        <div class="gauges" id="gauges">
+          <div class="gauge" data-k="easySolved"><div class="gauge-dial"><svg viewBox="0 0 100 100"><circle class="tick" cx="50" cy="50" r="47"/><circle class="trk" cx="50" cy="50" r="40"/><circle class="arc" cx="50" cy="50" r="40" pathLength="100" data-pct="48"/></svg><b>253</b></div><p class="gl">Easy</p></div>
+          <div class="gauge" data-k="mediumSolved"><div class="gauge-dial"><svg viewBox="0 0 100 100"><circle class="tick" cx="50" cy="50" r="47"/><circle class="trk" cx="50" cy="50" r="40"/><circle class="arc" cx="50" cy="50" r="40" pathLength="100" data-pct="39"/></svg><b>203</b></div><p class="gl">Medium</p></div>
+          <div class="gauge" data-k="hardSolved"><div class="gauge-dial"><svg viewBox="0 0 100 100"><circle class="tick" cx="50" cy="50" r="47"/><circle class="trk" cx="50" cy="50" r="40"/><circle class="arc" cx="50" cy="50" r="40" pathLength="100" data-pct="12"/></svg><b>65</b></div><p class="gl">Hard</p></div>
+        </div>
+        <p class="updated" id="stats-updated"></p>
+
+        <div class="cert-foot">
+          <div>
+            <h4>Contests by platform</h4>
+            <div class="split"><i id="cbp-lc-bar" style="width:69%"></i><i id="cbp-cc-bar" style="width:31%"></i></div>
+            <div class="leader"><b style="font-size:1.3rem">LeetCode</b><i></i><span id="cbp-lc-count">20</span></div>
+            <div class="leader" style="margin-top:8px"><b style="font-size:1.3rem">CodeChef</b><i></i><span id="cbp-cc-count">9</span></div>
+          </div>
+          <div>
+            <h4>Profiles</h4>
+            <ul class="profiles">
+              <li><a href="https://leetcode.com/u/Vince7827/" target="_blank" rel="noopener"><div class="leader"><b>LeetCode ↗</b><i></i><span id="tile-lc-meta">1859 · 20 contests</span></div></a></li>
+              <li><a href="https://www.codechef.com/users/vince7827" target="_blank" rel="noopener"><div class="leader"><b>CodeChef ↗</b><i></i><span id="tile-cc-meta">5★ · 2017 · 9 contests</span></div></a></li>
+              <li><a href="https://www.geeksforgeeks.org/profile/alonewalker07827" target="_blank" rel="noopener"><div class="leader"><b>GeeksforGeeks ↗</b><i></i><span>Profile</span></div></a></li>
+              <li><a href="https://www.hackerrank.com/profile/alonewalker07827" target="_blank" rel="noopener"><div class="leader"><b>HackerRank ↗</b><i></i><span>5★ · 308 problems</span></div></a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═════════════ palmarès ═════════════ -->
+  <section class="sec" id="palmares" aria-labelledby="pal-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">N° V — Palmarès</p>
+          <h2 class="h2" id="pal-h" data-split>By the <em>numbers</em></h2>
+        </div>
+      </div>
+      <ul class="pal" data-stagger>
+        <li><p class="n"><span data-count="9">9</span><sup>×</sup></p><p class="l">hackathon winner</p></li>
+        <li><p class="n"><span data-count="10">10</span><sup>+</sup></p><p class="l">hackathons organised</p></li>
+        <li><p class="n"><span data-count="100">100</span><sup>+</sup></p><p class="l">members upskilled</p></li>
+        <li><p class="n"><span data-count="6">6</span></p><p class="l">systems shipped above</p></li>
       </ul>
     </div>
   </section>
 
-  <section id="work" class="sec">
-    <div class="sec-head"><h2>Selected work</h2><p class="label">Six systems · 01 — 06</p></div>
-    <ol class="index">
-      <li>
-        <a class="row feature" href="case.html#digitwin">
-          <span class="num">01</span>
-          <div>
-            <h3>DigiTwin</h3>
-            <p class="sub">City-scale digital twin &amp; infrastructure simulation</p>
-            <p class="desc">A 3D twin of central London built on real OpenStreetMap geometry, with the water network modelled as a graph you can break, isolate and repair to watch failure propagate.</p>
-            <ul class="chips"><li>3D buildings + terrain</li><li>Pressure simulation</li><li>Pipe break / repair</li><li>Building isolation</li><li>Road closure state</li></ul>
-            <span class="more">Read the case study →</span>
-          </div>
-          <figure class="thumb">
-            <img src="assets/digitwin-network.jpeg" alt="DigiTwin in a browser: 3D London buildings with road and water-network overlays beside a water simulation panel" loading="lazy">
-            <figcaption class="label"><span>Water network over OSM road graph</span><span>Cesium / Resium · FastAPI · NetworkX</span></figcaption>
-          </figure>
-        </a>
-      </li>
-      <li>
-        <a class="row" href="case.html#mantis">
-          <span class="num">02</span>
-          <div>
-            <h3>Mantis</h3>
-            <p class="sub">Browser automation platform</p>
-            <p class="desc">Records a browser session once, then replays it as a parameterised workflow — scheduled, retried, logged and monitored from one dashboard.</p>
-            <p class="tags">Node.js · Express · Playwright · SQLite</p>
-          </div>
-          <figure class="thumb"><img src="assets/placeholder-mantis.svg" alt="Mantis" loading="lazy"></figure>
-        </a>
-      </li>
-      <li>
-        <a class="row" href="case.html#winspark">
-          <span class="num">03</span>
-          <div>
-            <h3>WinSpark</h3>
-            <p class="sub">Desktop automation engine</p>
-            <p class="desc">Software controlling software: drives WhatsApp Desktop through the Windows accessibility tree, routes every message through a webhook, and persists state before each irreversible step so a crash can be recovered from.</p>
-            <p class="tags">Python · Windows UI Automation · MongoDB · PySide6</p>
-          </div>
-          <figure class="thumb"><img src="assets/placeholder-winspark.svg" alt="WinSpark" loading="lazy"></figure>
-        </a>
-      </li>
-      <li>
-        <a class="row" href="case.html#green-ring">
-          <span class="num">04</span>
-          <div>
-            <h3>Green Ring</h3>
-            <p class="sub">WhatsApp automation &amp; messaging infrastructure</p>
-            <p class="desc">A FastAPI bridge over WhatsApp messaging rather than a chat client: authenticated send and media operations, validated configuration, and MongoDB Atlas archival of everything that passes through.</p>
-            <p class="tags">Python · FastAPI · MongoDB Atlas · Runs as a service</p>
-          </div>
-          <figure class="thumb"><img src="assets/placeholder-green-ring.svg" alt="Green Ring" loading="lazy"></figure>
-        </a>
-      </li>
-      <li>
-        <a class="row" href="case.html#pii">
-          <span class="num">05</span>
-          <div>
-            <h3>AI PII Detector</h3>
-            <p class="sub">Privacy detection &amp; data masking</p>
-            <p class="desc">Finds sensitive information before it becomes a problem. A hybrid regex and spaCy NLP pipeline reads PDF, DOCX, CSV, XLSX and TXT files, scores risk, then masks what it finds — in batch, from the CLI or the web app.</p>
-            <p class="tags">Python · Flask · Regex + spaCy · Risk scoring</p>
-          </div>
-          <figure class="thumb"><img src="assets/placeholder-pii.svg" alt="AI PII Detector" loading="lazy"></figure>
-        </a>
-      </li>
-      <li>
-        <a class="row" href="case.html#atlas">
-          <span class="num">06</span>
-          <div>
-            <h3>Atlas</h3>
-            <p class="sub">Personal productivity system</p>
-            <p class="desc">Tasks, notes and time in one calm surface. The engineering sits underneath: one store abstraction serving either local storage or Supabase, optimistic mutations, realtime sync, and a PWA shell that works offline.</p>
-            <p class="tags">React · Zustand · Supabase · PWA</p>
-          </div>
-          <figure class="thumb"><img src="assets/placeholder-atlas.svg" alt="Atlas" loading="lazy"></figure>
-        </a>
-      </li>
-    </ol>
-
-    <div class="sub-head"><h3 class="label">More builds</h3></div>
-    <ul class="cards">
-      <li><a class="card" href="https://github.com/Varshith07827/SignalOps" target="_blank" rel="noopener"><h3>SignalOps ↗</h3><p>Voice-of-Store engine: turns 40k messy multilingual store-feedback records into routed weekly actions and early-warning flags per region.</p><p class="tags">Python · NLP · Classification</p></a></li>
-      <li><a class="card" href="https://github.com/Varshith07827/Glyphs" target="_blank" rel="noopener"><h3>Glyph Studio ↗</h3><p>LED editor, battery indicator and charging effects for the Nothing Phone (3a) Glyph Interface. Per-LED brightness across all 36 LEDs.</p><p class="tags">Kotlin · Android</p></a></li>
-      <li><a class="card" href="https://github.com/Varshith07827/ebpf" target="_blank" rel="noopener"><h3>eBPF Insight ↗</h3><p>Attributes latency to the specific process responsible by correlating kernel events. In progress: scheduler and CPU accounting slice working.</p><p class="tags">C · libbpf / CO-RE · Go</p></a></li>
-      <li><a class="card" href="https://github.com/Varshith07827/Keynote" target="_blank" rel="noopener"><h3>Keynote ↗</h3><p>Typography wallpaper editor for Android and iOS: grab the lettering and it bends. Interactive deformation on a Skia canvas.</p><p class="tags">TypeScript · Skia · Reanimated</p></a></li>
-    </ul>
-  </section>
-
-  <section id="experience" class="sec">
-    <div class="sec-head"><h2>Experience</h2></div>
-    <ol class="list-top">
-      <li class="job">
-        <div>
-          <p class="label gold">Sep 2025 — Present</p>
-          <h3>BrainyMed</h3>
-          <p class="role">Software Engineering Intern · Remote</p>
-        </div>
-        <ul>
-          <li>Built end-to-end workflow automations with Playwright, Selenium and n8n, eliminating hundreds of hours of manual processing across client operations.</li>
-          <li>Designed and deployed Python automation pipelines for real product workflows in a fully remote, cross-timezone team.</li>
-          <li>Shipped production automation features autonomously — scoped, built, tested and delivered with minimal supervision.</li>
-        </ul>
-      </li>
-      <li class="job">
-        <div>
-          <p class="label gold">Feb 2025 — Present</p>
-          <h3>Novus Club</h3>
-          <p class="role">Co-founder · Technical Lead, AI/ML &amp; Data Science</p>
-        </div>
-        <ul>
-          <li>Co-founded the club from zero to an active community of 100+ members, running 10+ college hackathons and one national inter-college hackathon with participants from the IITs.</li>
-          <li>Lead the AI/ML and data science division, shifting the culture from slide decks to shipped projects.</li>
-          <li>Run weekly technical sessions on Python, ML, model deployment and modern AI tooling.</li>
-          <li>Partnered with global platforms including Perplexity, via Comet, as Campus Partner.</li>
-        </ul>
-      </li>
-      <li class="job">
-        <div>
-          <p class="label">Jun — Jul 2025</p>
-          <h3>VaultOfCodes</h3>
-          <p class="role">Python Programming Intern</p>
-        </div>
-        <ul>
-          <li>Wrote modular Python and integrated APIs into application features.</li>
-          <li>Ran code reviews that cut post-deployment bugs by 25%, delivering with a remote team two weeks ahead of schedule.</li>
-        </ul>
-      </li>
-    </ol>
-  </section>
-
-  <section class="sec" aria-labelledby="eng-h">
-    <div class="sec-head"><h2 id="eng-h">How I build</h2></div>
-    <div class="dl">
-      <div><h3>AI / ML</h3><p>TensorFlow · OpenCV · YOLO · LangChain · spaCy · LLMs · prompt engineering · NLP</p></div>
-      <div><h3>Automation</h3><p>Playwright · Selenium · n8n · Windows UI Automation · webhooks · schedulers · retries</p></div>
-      <div><h3>Backend</h3><p>FastAPI · Flask · Node.js · Express · REST APIs · SQLAlchemy · auth &amp; RBAC</p></div>
-      <div><h3>Frontend</h3><p>React · TypeScript · JavaScript · Zustand · Tailwind · Cesium / Resium · PWA</p></div>
-      <div><h3>Data</h3><p>Python · pandas · matplotlib · NetworkX · SQL · SQLite · MongoDB · Supabase · OpenStreetMap / Overpass</p></div>
-      <div><h3>Tooling</h3><p>Git · Cursor · Claude Code · v0 · Bolt · multithreading · testing · deployment</p></div>
-      <div><h3>Where ideas start</h3><p>observation · situations · environment</p></div>
-      <div><h3>Interest</h3><p>loads of free AI tools · computers &amp; machines</p></div>
-    </div>
-  </section>
-
-  <section class="sec" aria-labelledby="rec-h">
-    <div class="sec-head"><h2 id="rec-h">By the numbers</h2></div>
-    <ul class="figs">
-      <li><p class="fig-n">9×</p><p class="fig-l">Hackathon winner</p></li>
-      <li><p class="fig-n">10+</p><p class="fig-l">Hackathons organised</p></li>
-      <li><p class="fig-n">100+</p><p class="fig-l">Members upskilled</p></li>
-      <li><p class="fig-n">6</p><p class="fig-l">Systems shipped above</p></li>
-    </ul>
-  </section>
-
-  <section id="problem-solving" class="sec">
-    <div class="sec-head"><h2>Problem solving</h2><p class="label">Competitive programming</p></div>
-    <p class="lead">The other side of building systems: breaking problems down.</p>
-
-    <div class="ledger">
-      <article class="panel">
-        <p class="label gold">LeetCode</p>
-        <div><p class="big" id="lc-solved">521</p><p class="fig-l" style="margin-top:8px">Problems solved</p></div>
-        <div class="pair">
-          <div><p class="n" id="lc-rating">1859</p><p class="l">Current rating</p></div>
-          <div><p class="n" id="lc-max-rating">1859</p><p class="l">Max rating</p></div>
-          <div><p class="n"><span id="lc-contests">20</span></p><p class="l">Contests</p></div>
-        </div>
-      </article>
-      <article class="panel">
-        <p class="label gold">CodeChef <span id="cc-stars">★★★★★</span></p>
-        <div><p class="big" id="cc-rating">2017</p><p class="fig-l" style="margin-top:8px">Current rating</p></div>
-        <div class="pair">
-          <div><p class="n" id="cc-max-rating">2192</p><p class="l">Max rating</p></div>
-          <div><p class="n"><span id="cc-contests">9</span></p><p class="l">Contests</p></div>
-        </div>
-      </article>
-      <article class="panel">
-        <p class="label gold">Most recent contest</p>
-        <div>
-          <p class="big" style="font-size: clamp(1.7rem, 2.6vw, 2.3rem); line-height: 1.1;" id="mrc-title">LEETCODE · WEEKLY CONTEST 526</p>
-          <p class="fig-l" id="mrc-meta">01 NOV 2026 · RANK 2863</p>
-        </div>
-      </article>
-    </div>
-    <p id="stats-updated" class="label updated"></p>
-
-    <div class="two">
-      <div>
-        <h3 class="label">Contests by platform</h3>
-        <ul class="split">
-          <li id="cbp-lc-bar" style="width: 69%;"></li>
-          <li id="cbp-cc-bar" style="width: 31%;"></li>
-        </ul>
-        <ul class="rows">
-          <li><span>LeetCode</span><span class="v" id="cbp-lc-count">20</span></li>
-          <li><span>CodeChef</span><span class="v" id="cbp-cc-count">9</span></li>
-        </ul>
+  <!-- ═════════════ portrait ═════════════ -->
+  <section class="sec paper2" id="portrait" aria-labelledby="por-h">
+    <div class="wrap portrait">
+      <div class="crest" data-fade aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none">
+          <defs><path id="crestPath" d="M200,200 m-162,0 a162,162 0 1,1 324,0 a162,162 0 1,1 -324,0"/></defs>
+          <circle cx="200" cy="200" r="198" stroke="#1D140F" stroke-opacity=".55"/>
+          <circle cx="200" cy="200" r="190" stroke="#1D140F" stroke-opacity=".2"/>
+          <g class="spin"><text font-size="15" fill="#1D140F" letter-spacing="4"><textPath href="#crestPath" textLength="1008" lengthAdjust="spacing">VENKATA SAI VARSHITH · VISAKHAPATNAM · MMXXVI · AI · SYSTEMS · AUTOMATION · </textPath></text></g>
+          <circle cx="200" cy="200" r="140" stroke="#1D140F" stroke-opacity=".4"/>
+          <circle cx="200" cy="200" r="120" fill="#6A1B25"/>
+          <circle cx="200" cy="200" r="112" stroke="#EADFC8" stroke-opacity=".5"/>
+          <text x="200" y="244" text-anchor="middle" font-size="140" font-style="italic" fill="#EADFC8">V</text>
+        </svg>
       </div>
       <div>
-        <h3 class="label">LeetCode by difficulty — <span id="lc-total-label">521</span> total</h3>
-        <ul class="bars">
-          <li><div class="t"><span>Easy</span><span class="v" id="lc-easy">253</span></div><div class="bar"><i id="lc-easy-bar" style="width: 100%;"></i></div></li>
-          <li><div class="t"><span>Medium</span><span class="v" id="lc-medium">203</span></div><div class="bar"><i id="lc-medium-bar" style="width: 80%;"></i></div></li>
-          <li><div class="t"><span>Hard</span><span class="v" id="lc-hard">65</span></div><div class="bar"><i id="lc-hard-bar" style="width: 26%;"></i></div></li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="label" style="margin-top: clamp(40px, 7vh, 80px);">Profiles</h3>
-    <ul class="plist">
-      <li><a href="https://leetcode.com/u/Vince7827/" target="_blank" rel="noopener"><span class="nm">LeetCode ↗</span><span class="meta" id="tile-lc-meta">1859 rating · 20 contests</span></a></li>
-      <li><a href="https://www.codechef.com/users/vince7827" target="_blank" rel="noopener"><span class="nm">CodeChef ↗</span><span class="meta" id="tile-cc-meta">5★ · 2017 rating · 9 contests</span></a></li>
-      <li><a href="https://github.com/Varshith07827" target="_blank" rel="noopener"><span class="nm">GitHub ↗</span><span class="meta">Source for every project here</span></a></li>
-      <li><a href="https://www.geeksforgeeks.org/profile/alonewalker07827" target="_blank" rel="noopener"><span class="nm">GeeksforGeeks ↗</span><span class="meta">Profile</span></a></li>
-      <li><a href="https://www.hackerrank.com/profile/alonewalker07827" target="_blank" rel="noopener"><span class="nm">HackerRank ↗</span><span class="meta">5★ · 308 problems</span></a></li>
-    </ul>
-  </section>
-
-  <section id="about" class="sec">
-    <div class="sec-head"><h2>About</h2></div>
-    <div class="about">
-      <p class="label">The short version</p>
-      <div>
-        <p class="pull">I build systems that ship — not prototypes that collect stars.</p>
-        <div class="prose">
-          <p class="dropcap">Most of what I make sits somewhere between AI, systems and automation: things that drive other software, model infrastructure, or read documents nobody wants to read. I learn by building, and the projects on this page are how I got here.</p>
-          <p>I'm a dual-degree student — B.Tech in Computer Science at GVPCDPGC and B.Sc in Data Science &amp; Programming at IIT Madras — currently interning remotely as a software engineer at BrainyMed, where the work is workflow automation and end-to-end systems.</p>
-          <p>I move fast on new tooling, but I still build foundations from scratch when it matters.</p>
+        <p class="eyebrow">N° VI — Portrait</p>
+        <h2 class="sr" id="por-h">About</h2>
+        <p class="pull" style="margin-top:26px" data-split>An engineer who learns by building.</p>
+        <div class="prose" data-fade>
+          <p class="dropcap">I’m a dual-degree student — B.Tech in Computer Science at GVPCDPGC and B.Sc in Data Science &amp; Programming at IIT Madras — currently interning remotely as a software engineer at BrainyMed, where the work is workflow automation and end-to-end systems.</p>
+          <p>Visakhapatnam is home. The aim is simple: build things that are useful the day they ship, and keep them useful after.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="sec">
-    <div class="sec-head"><h2>Contact</h2></div>
-    <p class="sign">Build something <em>useful.</em></p>
-    <ul class="plist" style="margin-top: clamp(28px, 5vh, 56px);">
-      <li><a href="mailto:sandakavarshith@gmail.com"><span class="nm">Email</span><span class="meta">sandakavarshith@gmail.com</span></a></li>
-      <li><a href="https://github.com/Varshith07827" target="_blank" rel="noopener"><span class="nm">GitHub ↗</span><span class="meta">Varshith07827</span></a></li>
-      <li><a href="https://www.linkedin.com/in/saivarshith-" target="_blank" rel="noopener"><span class="nm">LinkedIn ↗</span><span class="meta">saivarshith-</span></a></li>
-      <li><a href="https://drive.google.com/file/d/1TyIl5IZtQ8gXd5CH3LH8my7f1z_xphY0/view?usp=sharing" target="_blank" rel="noopener"><span class="nm">Résumé ↗</span><span class="meta">PDF</span></a></li>
-    </ul>
-    <p class="foot">Venkata Sai Varshith Sandaka · Visakhapatnam, India · +91 79811 49423</p>
+  <!-- ═════════════ correspondance ═════════════ -->
+  <section class="sec dark" data-nav id="contact" aria-labelledby="con-h" style="padding-bottom:0">
+    <div class="wrap">
+      <p class="eyebrow">N° VII — Correspondance</p>
+      <div class="corr">
+        <div>
+          <h2 class="sign" id="con-h" data-split>Build something <em>useful.</em></h2>
+          <p class="letter" data-fade>If you have a problem worth solving — a workflow that eats hours, a system that needs to survive failure, a document nobody wants to read — write to me.</p>
+        </div>
+        <div data-fade>
+          <a class="seal" href="mailto:sandakavarshith@gmail.com" aria-label="Write an email" data-cursor="Écrire">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <defs>
+                <radialGradient id="ws" cx=".36" cy=".3" r=".8"><stop offset="0" stop-color="#A63241"/><stop offset=".55" stop-color="#6A1B25"/><stop offset="1" stop-color="#3C0E17"/></radialGradient>
+                <filter id="wob" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".028" numOctaves="2" seed="5"/><feDisplacementMap in="SourceGraphic" scale="16"/></filter>
+              </defs>
+              <circle cx="100" cy="100" r="80" fill="url(#ws)" filter="url(#wob)"/>
+              <circle cx="100" cy="100" r="58" fill="none" stroke="#D18090" stroke-opacity=".45" stroke-width="2"/>
+              <text x="100" y="128" text-anchor="middle" font-family="Bodoni Moda, Didot, Georgia, serif" font-style="italic" font-size="84" fill="#D79AA5" fill-opacity=".85">V</text>
+            </svg>
+          </a>
+          <p class="seal-cap">Sealed &amp; delivered</p>
+        </div>
+      </div>
+      <ul class="contacts" data-stagger>
+        <li><a href="mailto:sandakavarshith@gmail.com"><div class="leader"><b>Email</b><i></i><span>sandakavarshith@gmail.com</span></div></a></li>
+        <li><a href="https://github.com/Varshith07827" target="_blank" rel="noopener"><div class="leader"><b>GitHub ↗</b><i></i><span>Varshith07827</span></div></a></li>
+        <li><a href="https://www.linkedin.com/in/saivarshith-" target="_blank" rel="noopener"><div class="leader"><b>LinkedIn ↗</b><i></i><span>saivarshith-</span></div></a></li>
+        <li><a href="https://drive.google.com/file/d/1TyIl5IZtQ8gXd5CH3LH8my7f1z_xphY0/view?usp=sharing" target="_blank" rel="noopener"><div class="leader"><b>Résumé ↗</b><i></i><span>PDF</span></div></a></li>
+      </ul>
+      <footer class="foot">
+        <p class="merci" id="merci" aria-label="Merci.">Merci.</p>
+        <div class="foot-row">
+          <span>Venkata Sai Varshith Sandaka · Visakhapatnam, India · +91 79811 49423</span>
+          <span>Visakhapatnam <b data-clock="Asia/Kolkata">--:--</b> · Paris <b data-clock="Europe/Paris">--:--</b></span>
+          <button id="toTop">Back to top ↑</button>
+        </div>
+      </footer>
+    </div>
   </section>
 </main>
 
-<script>
-(function () {
-  function fmtDate(iso) {
-    if (!iso) return "";
-    var d = new Date(iso + "T00:00:00Z");
-    if (isNaN(d)) return "";
-    var months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
-    return String(d.getUTCDate()).padStart(2, "0") + " " + months[d.getUTCMonth()] + " " + d.getUTCFullYear();
-  }
-
-  function setText(id, value) {
-    var el = document.getElementById(id);
-    if (el && value !== null && value !== undefined) el.textContent = value;
-  }
-
-  fetch("assets/stats.json", { cache: "no-store" })
-    .then(function (res) { if (!res.ok) throw new Error("stats fetch failed"); return res.json(); })
-    .then(function (data) {
-      var lc = data.leetcode || {};
-      var cc = data.codechef || {};
-
-      setText("lc-solved", lc.totalSolved);
-      setText("lc-rating", lc.contestRating);
-      setText("lc-max-rating", lc.maxContestRating);
-      setText("lc-contests", lc.contestsAttended);
-      setText("lc-easy", lc.easySolved);
-      setText("lc-medium", lc.mediumSolved);
-      setText("lc-hard", lc.hardSolved);
-      setText("lc-total-label", lc.totalSolved);
-      if (lc.easySolved != null && lc.mediumSolved != null && lc.hardSolved != null) {
-        var maxDiff = Math.max(lc.easySolved, lc.mediumSolved, lc.hardSolved) || 1;
-        var easyBar = document.getElementById("lc-easy-bar");
-        var mediumBar = document.getElementById("lc-medium-bar");
-        var hardBar = document.getElementById("lc-hard-bar");
-        if (easyBar) easyBar.style.width = Math.round((lc.easySolved / maxDiff) * 100) + "%";
-        if (mediumBar) mediumBar.style.width = Math.round((lc.mediumSolved / maxDiff) * 100) + "%";
-        if (hardBar) hardBar.style.width = Math.round((lc.hardSolved / maxDiff) * 100) + "%";
-      }
-      setText("cc-rating", cc.currentRating);
-      setText("cc-max-rating", cc.highestRating);
-      setText("cc-contests", cc.contestsAttended);
-      if (cc.stars) setText("cc-stars", "★".repeat(cc.stars));
-
-      setText("tile-lc-meta", lc.contestRating + " rating · " + lc.contestsAttended + " contests");
-      if (cc.stars) {
-        setText("tile-cc-meta", cc.stars + "★ · " + cc.currentRating + " rating · " + cc.contestsAttended + " contests");
-      }
-
-      var lcContest = lc.mostRecentContest;
-      var ccContest = cc.mostRecentContest;
-      var mostRecent = null;
-      if (lcContest && ccContest) mostRecent = lcContest.date >= ccContest.date ? { platform: "LEETCODE", c: lcContest } : { platform: "CODECHEF", c: ccContest };
-      else if (lcContest) mostRecent = { platform: "LEETCODE", c: lcContest };
-      else if (ccContest) mostRecent = { platform: "CODECHEF", c: ccContest };
-      if (mostRecent) {
-        setText("mrc-title", mostRecent.platform + " · " + mostRecent.c.title.toUpperCase());
-        setText("mrc-meta", fmtDate(mostRecent.c.date) + " · RANK " + mostRecent.c.rank);
-      }
-
-      var lcN = lc.contestsAttended || 0, ccN = cc.contestsAttended || 0, total = lcN + ccN;
-      if (total > 0) {
-        var lcPct = Math.round((lcN / total) * 100);
-        var lcBar = document.getElementById("cbp-lc-bar");
-        var ccBar = document.getElementById("cbp-cc-bar");
-        if (lcBar) lcBar.style.width = lcPct + "%";
-        if (ccBar) ccBar.style.width = (100 - lcPct) + "%";
-      }
-      setText("cbp-lc-count", lcN);
-      setText("cbp-cc-count", ccN);
-
-      if (data.generatedAt) {
-        var updated = new Date(data.generatedAt);
-        setText("stats-updated", "LEETCODE + CODECHEF LIVE · UPDATED " + fmtDate(updated.toISOString().slice(0, 10)));
-      }
-    })
-    .catch(function () {
-      // assets/stats.json unavailable (e.g. local file:// preview) — keep the static fallback numbers already in the markup.
-    });
-})();
-</script>
-<script>
-(function () {
-  var NAMESPACE = "saiv-me-varshith07827";
-  var KEY = "visits";
-  var base = "https://abacus.jasoncameron.dev";
-  var visitCount = null;
-
-  var alreadyCounted = sessionStorage.getItem("sv_visit_counted");
-  var url = alreadyCounted ? base + "/get/" + NAMESPACE + "/" + KEY : base + "/hit/" + NAMESPACE + "/" + KEY;
-  fetch(url)
-    .then(function (res) { return res.json(); })
-    .then(function (data) {
-      visitCount = data.value;
-      if (!alreadyCounted) sessionStorage.setItem("sv_visit_counted", "1");
-    })
-    .catch(function () {});
-
-  var sequence = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];
-  var progress = 0;
-  document.addEventListener("keydown", function (e) {
-    var key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-    progress = key === sequence[progress] ? progress + 1 : (key === sequence[0] ? 1 : 0);
-    if (progress === sequence.length) {
-      progress = 0;
-      showVisitToast();
-    }
-  });
-
-  function showVisitToast() {
-    var existing = document.getElementById("visit-toast");
-    if (existing) existing.remove();
-
-    var toast = document.createElement("div");
-    toast.id = "visit-toast";
-    toast.style.cssText = "position: fixed; bottom: 24px; right: 24px; z-index: 9999; background: #18261F; border: 1px solid #E0B25A; padding: clamp(18px, 2.6vw, 26px); font-family: 'Fraunces', Georgia, serif; color: #F1EADA; opacity: 0; transform: translateY(8px); transition: opacity 0.3s ease, transform 0.3s ease; max-width: 260px;";
-    var value = visitCount === null ? "—" : visitCount.toLocaleString();
-    toast.innerHTML =
-      '<p style="font-size: 40px; font-weight: 300; letter-spacing: -0.03em; line-height: 0.95; color: #E0B25A;">' + value + '</p>' +
-      '<p style="margin-top: 8px; font-family: \'Newsreader\', Georgia, serif; font-size: 10px; letter-spacing: 0.14em; color: #98A194;">SITE VISITS SINCE LAUNCH</p>';
-    document.body.appendChild(toast);
-    requestAnimationFrame(function () {
-      toast.style.opacity = "1";
-      toast.style.transform = "translateY(0)";
-    });
-    setTimeout(function () {
-      toast.style.opacity = "0";
-      toast.style.transform = "translateY(8px)";
-      setTimeout(function () { toast.remove(); }, 300);
-    }, 4000);
-  }
-})();
-</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
 </body>
 </html>

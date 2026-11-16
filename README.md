@@ -1,23 +1,34 @@
-# portfolio-3d
+# v-portfolio
 
-Personal portfolio for Venkata Sai Varshith — AI / Systems / Automation.
+Portfolio of Venkata Sai Varshith — AI, systems and automation. An editorial site in the spirit of an old-money almanac: parchment and espresso grounds, bordeaux and brass accents, Bodoni Moda + EB Garamond, a working wristwatch dial as the hero.
 
-Plain static HTML/CSS/JS, no build step:
+Plain static HTML/CSS/JS — no build step.
 
-- [`index.html`](index.html) — home page: intro, six selected projects, experience, stack, competitive-programming stats, about, contact.
-- [`case.html`](case.html) — case-study page for each project, rendered client-side from a `PROJECTS` array based on the URL hash (e.g. `case.html#digitwin`).
-- [`assets/`](assets) — project screenshots and placeholder cover images (used where a real screenshot isn't available yet — swap the file in `assets/` and the `image` field in `case.html` once one is).
+| Path | What it is |
+| --- | --- |
+| `index.html` | Home: loader, pinned watch-dial hero that opens into the credo, the work index, experience, craft, live competitive-programming certificate, portrait, correspondence |
+| `case.html` | Case-study dossiers, hash-routed (`case.html#winspark`), rendered from `js/data.js` |
+| `style.css` | The whole design system (tokens at the top) |
+| `js/data.js` | Single source of truth for the six projects: copy, stack, screenshots |
+| `js/common.js` | Smooth scroll (Lenis), page-transition curtain, nav, cursor, clocks |
+| `js/home.js` | The dial, loader, hero scene, scroll choreography, live stats |
+| `js/case.js` | Case-study page |
+| `assets/` | Project screenshots (captured from the running projects) and `stats.json` |
+| `scripts/`, `.github/workflows/` | Action that refreshes `assets/stats.json` (LeetCode + CodeChef) |
 
-## Running locally
+Libraries load from CDNs: GSAP + ScrollTrigger (cdnjs) and Lenis (jsDelivr). If they fail to load, the page falls back to a plain, readable static layout.
 
-No build tooling required — serve the folder with any static file server, e.g.
+## Run locally
 
 ```bash
 python3 -m http.server 8000
 ```
 
-then open `http://localhost:8000`.
+then open <http://localhost:8000>.
 
-## Deployment
+## Notes
 
-Served via GitHub Pages from the `main` branch. Custom domain configured through the `CNAME` file.
+- Respects `prefers-reduced-motion`: no smooth scroll, pinning or loader.
+- The loader plays once per browser session; navigating between pages uses a curtain transition.
+- Hidden: the Konami code shows the visit counter.
+- Screenshots: Atlas, AI PII Detector, Mantis and Green Ring were captured from the running apps (PII with fake sample data); WinSpark's come from its own docs (it is Windows-only); DigiTwin's are cropped to the 3D viewport.
