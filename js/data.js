@@ -17,26 +17,36 @@ window.PROJECTS = [
       "PYTHON",
       "FASTAPI",
       "PYDANTIC",
-      "HTTPX",
       "NETWORKX",
+      "SCIPY",
       "OVERPASS API"
     ],
     "links": [],
     "gallery": [
       {
-        "src": "assets/digitwin-network.jpeg",
-        "alt": "DigiTwin: 3D London buildings with road and water-network overlays and the water simulation panel",
-        "cap": "The water network drawn over the OSM road graph, running locally"
+        "src": "assets/digitwin-burst.jpg",
+        "alt": "DigiTwin: a burst trunk main in Central London, with buildings coloured by water pressure and an impact panel",
+        "cap": "A burst trunk main: pressure falls around it and 183 buildings lose supply"
       },
       {
-        "src": "assets/digitwin-skyline.jpeg",
-        "alt": "DigiTwin: extruded OpenStreetMap buildings across the City of London over real terrain",
-        "cap": "OSM buildings extruded over real terrain"
+        "src": "assets/digitwin-city.jpg",
+        "alt": "DigiTwin: Central London as 3D buildings and terrain in the light theme, with the layers panel",
+        "cap": "Central London from local OpenStreetMap data — no token, no internet needed"
       },
       {
-        "src": "assets/digitwin-buildings.jpeg",
-        "alt": "DigiTwin: a single landmark highlighted among translucent building volumes",
-        "cap": "A single structure picked out of the city"
+        "src": "assets/digitwin-bridge.jpg",
+        "alt": "DigiTwin: Blackfriars Bridge closed to traffic, with rerouted journeys and an impact panel",
+        "cap": "Closing Blackfriars Bridge reroutes 79 trips and lengthens the average journey"
+      },
+      {
+        "src": "assets/digitwin-street.jpg",
+        "alt": "DigiTwin: street view standing on the closed Blackfriars Bridge with simulated traffic",
+        "cap": "Street view on the closed bridge, with simulated traffic"
+      },
+      {
+        "src": "assets/digitwin-storm.jpg",
+        "alt": "DigiTwin: a design storm over Central London, with flooded streets and a rainfall hydrograph",
+        "cap": "A 50 mm-in-an-hour storm: flooded streets, impassable roads and full drains"
       }
     ],
     "sections": [
@@ -56,22 +66,25 @@ window.PROJECTS = [
         "h": "WHAT I BUILT",
         "body": [
           "A FastAPI backend fetches OSM roads and water through the Overpass API, converts the result to GeoJSON, and builds a NetworkX graph of the water segments. Pressure propagates from source nodes through that graph, so passing a set of broken pipe IDs returns new per-segment pressures — which the viewer colourises in place.",
-          "Most of the engineering is in the middle: caching and falling back to local GeoJSON when Overpass is unreachable, reconciling messy map data into a graph clean enough to simulate, and keeping the Cesium scene in step with simulation state without re-rendering the city."
+          "Most of the engineering is in the middle: caching and falling back to local GeoJSON when Overpass is unreachable, reconciling messy map data into a graph clean enough to simulate, and keeping the Cesium scene in step with simulation state without re-rendering the city.",
+          "The model has since grown past water: a traffic layer that reroutes trips around closed roads, an incident timeline that plays a burst through isolation, repair and the road reopening, storm drainage and flooding from rainfall to street-level depth, A* routing for the repair crew, and a street-view mode to stand on the road you just closed."
         ]
       }
     ],
     "now": [
-      "3D BUILDINGS + TERRAIN",
-      "OSM ROAD + WATER OVERLAY",
-      "WATER PRESSURE SIMULATION",
-      "PIPE BREAK / REPAIR",
-      "BUILDING ISOLATION",
-      "ROAD CLOSURE STATE",
-      "LOCAL GEOJSON FALLBACK"
+      "3D BUILDINGS + TERRAIN, OFFLINE",
+      "WATER PRESSURE (HAZEN-WILLIAMS)",
+      "BURST / ISOLATE / REPAIR",
+      "TRAFFIC + ROAD CLOSURES",
+      "INCIDENT TIMELINE",
+      "STORM DRAINAGE + FLOODING",
+      "A* ROUTING",
+      "LANE-CLOSURE MICROSIMULATION",
+      "STREET VIEW",
+      "SCENARIO COMPARE + CSV EXPORT"
     ],
     "next": [
       "ELECTRICITY LAYER",
-      "TRAFFIC",
       "WEATHER",
       "IOT SENSORS"
     ]
@@ -128,13 +141,18 @@ window.PROJECTS = [
     ],
     "gallery": [
       {
-        "src": "assets/mantis-sds.jpg",
-        "alt": "Mantis dashboard: SDS automation tab with a product list and the start button, under summary counters",
-        "cap": "The Mantis dashboard — batch SDS automation"
+        "src": "assets/mantis-console.jpg",
+        "alt": "Mantis console: sidebar navigation, summary cards, the SDS automation form and saved product lists",
+        "cap": "The Mantis console — batch SDS automation with saved product lists"
+      },
+      {
+        "src": "assets/mantis-schedules.jpg",
+        "alt": "Mantis console: active schedules with their product lists and times",
+        "cap": "Schedules: recurring runs against a saved product list"
       },
       {
         "src": "assets/mantis-stats.jpg",
-        "alt": "Mantis dashboard: system statistics tab showing test cases, downloads, logs and disk usage",
+        "alt": "Mantis console: system statistics for test cases, downloads, logs and disk usage",
         "cap": "System statistics for the platform"
       }
     ]
@@ -198,77 +216,86 @@ window.PROJECTS = [
     ],
     "gallery": [
       {
-        "src": "assets/winspark-dark.jpg",
-        "alt": "WinSpark main window in dark theme: chat list on the left, per-chat automation, webhook URL and activity on the right",
-        "cap": "The main window, dark theme — demo contacts"
-      },
-      {
         "src": "assets/winspark-light.jpg",
-        "alt": "WinSpark main window in light theme",
-        "cap": "The same window, light theme"
+        "alt": "WinSpark main window in the light theme: chat list with automation badges, per-chat webhook settings and activity",
+        "cap": "The main window — demo contacts, from the project’s own docs"
       }
     ]
   },
   {
-    "id": "green-ring",
+    "id": "signalops",
     "num": "04",
     "roman": "IV",
-    "name": "Green Ring",
-    "title": "WhatsApp automation & messaging infrastructure",
-    "short": "A FastAPI bridge over WhatsApp messaging rather than a chat client: authenticated send and media operations, validated configuration, and MongoDB Atlas archival of everything that passes through.",
-    "tags": "Python · FastAPI · MongoDB Atlas",
-    "blurb": "Messaging infrastructure rather than a WhatsApp client: a FastAPI bridge exposing authenticated send and media operations, with every message archived to MongoDB Atlas.",
+    "name": "SignalOps",
+    "title": "Voice-of-Store engine — messy feedback into weekly actions",
+    "short": "Turns 40k messy multilingual store-feedback records into routed weekly actions and early-warning flags per region.",
+    "tags": "Python · scikit-learn · FastAPI · Leaflet",
+    "blurb": "Turns tens of thousands of messy, multilingual store-feedback records into a prioritised weekly action list per region, routes each issue to the team that owns it, and flags a store’s problem while it is still small.",
     "stack": [
       "PYTHON",
+      "SCIKIT-LEARN",
+      "PANDAS",
+      "SCIPY",
       "FASTAPI",
-      "UVICORN",
-      "PYDANTIC",
-      "HTTPX",
-      "PYMONGO",
-      "MONGODB ATLAS"
+      "LEAFLET",
+      "TOML CONFIG",
+      "PYTEST"
     ],
     "links": [
       {
         "label": "GITHUB ↗",
-        "href": "https://github.com/Varshith07827/green-ring"
+        "href": "https://github.com/Varshith07827/SignalOps"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "assets/signalops-overview.jpg",
+        "alt": "SignalOps dashboard for the South region: this week's message counts, top five issues to act on and early warnings",
+        "cap": "The weekly view for one region — shown on a synthetic demo dataset"
+      },
+      {
+        "src": "assets/signalops-teams.jpg",
+        "alt": "SignalOps: who must act this week, per team, with escalation rules and deadlines",
+        "cap": "Who must act this week, and when to escalate"
+      },
+      {
+        "src": "assets/signalops-map.jpg",
+        "alt": "SignalOps: a store selected on the map, with its problems this week and the last one solved",
+        "cap": "Stores on the map: this week’s problems, and the last one solved"
       }
     ],
     "sections": [
       {
         "h": "WHAT IT IS",
         "body": [
-          "An HTTP layer that exposes WhatsApp messaging as ordinary infrastructure — authenticate, send, attach media — so other systems can treat it as a service instead of an app someone has to sit in front of."
+          "A grocery chain with 60 stores in five regions gets about 1,500 messages a week — online reviews, app comments, staff shift notes and call-centre transcripts — in English, Hinglish and transliterated Tamil and Marathi, with typos, emojis and shorthand. SignalOps reads all of it and answers one question: what should each team do this week?"
         ]
       },
       {
         "h": "WHY IT MATTERS",
         "body": [
-          "Messaging is where a lot of operational work actually happens. Once it is behind an API with authentication and a durable record, it can be automated, audited and joined to everything else."
+          "Real store problems — a broken freezer, a mislabelled allergen, a rude billing counter — are buried in that noise and reach head office weeks late. The value is in turning the noise into a short, owned, time-boxed action list, and in catching the small-but-rising problem before it is chain-wide."
         ]
       },
       {
         "h": "WHAT I BUILT",
         "body": [
-          "A FastAPI bridge over an OpenWA session: authenticated endpoints for sending text and uploaded media, httpx for the calls out, and Pydantic settings so configuration is validated at startup rather than discovered at runtime.",
-          "Every message passing through is archived to MongoDB Atlas through pymongo, which makes the system debuggable and gives downstream tools something to read. Shell installers register it as a service, so it runs as infrastructure rather than a script someone starts."
+          "A pipeline that labels every message with an issue type, a severity and whether anyone can act on it; routes each actionable issue to its owning team with an escalation level and deadline; merges the same incident reported through several channels; and writes a one-page brief per region per week with the top five issues, evidence quotes and a trend arrow.",
+          "The early-warning detector is causal: for any week it uses only feedback up to that Sunday, compares each store with its own baseline pulled toward the chain average, and flags a small, sharp rise with at least two messages as evidence. On the hackathon pack, cross-validated classification scored 0.945 against a 0.579 baseline, and 97% of the messages marked actionable truly were.",
+          "A FastAPI dashboard with a Leaflet store map sits on top; the web layer holds no analysis logic. Every threshold, window, weight and deadline lives in one config file, and 64 tests run on small synthetic data."
         ]
       }
     ],
     "now": [
-      "AUTH + SESSION HANDLING",
-      "SEND ENDPOINT",
-      "MULTIPART MEDIA UPLOAD",
-      "MONGODB ATLAS ARCHIVAL",
-      "VALIDATED CONFIG",
-      "SERVICE INSTALL SCRIPTS",
-      "POSTMAN COLLECTION"
-    ],
-    "gallery": [
-      {
-        "src": "assets/greenring-docs.jpg",
-        "alt": "OpenWA Bridge API reference served by the running FastAPI app, listing send, reply, react, forward, location, contact, poll, edit, delete and star endpoints",
-        "cap": "The bridge’s live API reference, served by the running FastAPI app"
-      }
+      "ISSUE TYPE + SEVERITY + ACTIONABLE",
+      "OWNER ROUTING WITH DEADLINES",
+      "WEEK-BY-WEEK EARLY WARNINGS",
+      "CROSS-CHANNEL DE-DUPLICATION",
+      "ONE-PAGE REGIONAL BRIEFS",
+      "STORE MAP + CASE LISTS",
+      "CHECK-A-NEW-REVIEW FORM",
+      "ALL THRESHOLDS IN ONE CONFIG",
+      "64 TESTS"
     ]
   },
   {
@@ -326,13 +353,13 @@ window.PROJECTS = [
     "gallery": [
       {
         "src": "assets/pii-scan.jpg",
-        "alt": "AI PII Detector: sample text with names, email, PAN, Aadhaar, date of birth and IP address highlighted as detections, with a critical risk assessment",
-        "cap": "A scan of fake sample data — detections highlighted and risk scored"
+        "alt": "PII Detector: a sample document with names, dates, email, PAN, Aadhaar and IP highlighted, a critical risk score of 98 and GDPR, DPDP and HIPAA flags",
+        "cap": "A scan of fictional sample data — every identifier highlighted, risk scored, compliance flagged"
       },
       {
         "src": "assets/pii-masked.jpg",
-        "alt": "AI PII Detector: the same text with its sanitised, partially masked output alongside",
-        "cap": "The same text, masked"
+        "alt": "PII Detector: the masked output tab, with partial masking applied to the same document",
+        "cap": "The same document, masked"
       }
     ]
   },

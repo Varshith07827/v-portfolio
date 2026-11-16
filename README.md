@@ -31,4 +31,4 @@ then open <http://localhost:8000>.
 - Respects `prefers-reduced-motion`: no smooth scroll, pinning or loader.
 - The loader plays once per browser session; navigating between pages uses a curtain transition.
 - Hidden: the Konami code shows the visit counter.
-- Screenshots: Atlas, AI PII Detector, Mantis and Green Ring were captured from the running apps (PII with fake sample data); WinSpark's come from its own docs (it is Windows-only); DigiTwin's are cropped to the 3D viewport.
+- Screenshots: DigiTwin, Mantis, the AI PII Detector and SignalOps were captured from the running projects in their light themes (the PII scan uses fictional sample data; SignalOps runs the real engine on a clearly-labelled synthetic dataset because the hackathon pack isn't public). Atlas is dark-only, so its captures are dark. WinSpark is Windows-only, so its capture comes from the project's own docs.
