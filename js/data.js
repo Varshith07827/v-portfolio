@@ -96,7 +96,7 @@ window.PROJECTS = [
     "name": "Mantis",
     "title": "Browser automation platform",
     "short": "Records a browser session once, then replays it as a parameterised workflow — scheduled, retried, logged and monitored from one dashboard.",
-    "tags": "Node.js · Express · Playwright · SQLite",
+    "tags": "Node.js · Express · Playwright · React",
     "blurb": "Turns browser actions into repeatable automation: record a session once, then replay it as a parameterised workflow with scheduling, retries and an audit trail.",
     "stack": [
       "NODE.JS",
@@ -104,8 +104,11 @@ window.PROJECTS = [
       "PLAYWRIGHT",
       "SOCKET.IO",
       "SQLITE + SEQUELIZE",
-      "CODEGEN",
-      "PDF EXTRACTION"
+      "REACT 19",
+      "TYPESCRIPT",
+      "VITE",
+      "TAILWIND",
+      "BASE UI"
     ],
     "links": [],
     "sections": [
@@ -125,35 +128,37 @@ window.PROJECTS = [
         "h": "WHAT I BUILT",
         "body": [
           "A Playwright codegen wrapper turns a recorded session into a runnable test case, parameterised so one recording serves many inputs, with fallback and retry behaviour for the selectors that inevitably drift. A PDF extraction and upload step handles the documents these workflows tend to end at.",
-          "An Express server fronts it with a dashboard, Socket.IO streams run progress live, and SQLite through Sequelize keeps the run history, audit log and analytics — so the platform can be operated rather than just executed."
+          "An Express server fronts it with a dashboard, Socket.IO streams run progress live, and SQLite through Sequelize keeps the run history, audit log and analytics — so the platform can be operated rather than just executed.",
+          "The console itself is a React and TypeScript app (Tailwind, Base UI, Motion) built into the Express static folder, so the server runs it with no Node tooling in production. It plots schedules on a live 24-hour timeline, hides routine scheduler noise from the activity feed, and has a command palette and dark theme. Rebuilding it also exposed two request-contract bugs in the old page (the run-test call sent the wrong field names, and the test list read the wrong response key); both are fixed."
         ]
       }
     ],
     "now": [
       "SESSION RECORD / REPLAY",
       "GENERATED TEST CASES",
-      "PARAMETERISED INPUTS",
-      "LIVE RUN STREAMING",
-      "RETRIES + FALLBACKS",
+      "SAVED PRODUCT LISTS",
+      "SCHEDULES ON A LIVE DAY TIMELINE",
+      "NEXT-RUN COUNTDOWN",
       "PDF EXTRACTION + UPLOAD",
-      "AUDIT LOGS",
-      "RUN ANALYTICS"
+      "FILTERABLE ACTIVITY LOG",
+      "LIVE FILE SEARCH",
+      "COMMAND PALETTE"
     ],
     "gallery": [
       {
         "src": "assets/mantis-console.jpg",
-        "alt": "Mantis console: sidebar navigation, summary cards, the SDS automation form and saved product lists",
-        "cap": "The Mantis console — batch SDS automation with saved product lists"
+        "alt": "Mantis console overview: summary tiles, a 24-hour schedule timeline with a live now marker and next-run countdown, quick actions and recent activity",
+        "cap": "Overview: a live day timeline with a next-run countdown, and the activity feed"
+      },
+      {
+        "src": "assets/mantis-sds.jpg",
+        "alt": "Mantis SDS automation page: products typed into the run form shown as removable chips beside saved product lists",
+        "cap": "SDS automation: paste products, or run a saved list"
       },
       {
         "src": "assets/mantis-schedules.jpg",
-        "alt": "Mantis console: active schedules with their product lists and times",
-        "cap": "Schedules: recurring runs against a saved product list"
-      },
-      {
-        "src": "assets/mantis-stats.jpg",
-        "alt": "Mantis console: system statistics for test cases, downloads, logs and disk usage",
-        "cap": "System statistics for the platform"
+        "alt": "Mantis schedules page: the day timeline above a new-schedule form and the active schedules sorted by next run",
+        "cap": "Schedules: sorted by next run, plotted on the day timeline"
       }
     ]
   },
