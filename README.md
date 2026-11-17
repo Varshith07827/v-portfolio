@@ -9,7 +9,7 @@ Plain static HTML/CSS/JS — no build step.
 | `index.html` | Home: loader, pinned watch-dial hero that opens into the credo, the work index, experience, craft, live competitive-programming certificate, portrait, correspondence |
 | `case.html` | Case-study dossiers, hash-routed (`case.html#winspark`), rendered from `js/data.js` |
 | `style.css` | The whole design system (tokens at the top) |
-| `js/data.js` | Single source of truth for the six projects: copy, stack, screenshots |
+| `js/data.js` | Single source of truth for the seven projects: copy, stack, screenshots |
 | `js/common.js` | Smooth scroll (Lenis), page-transition curtain, nav, cursor, clocks |
 | `js/home.js` | The dial, loader, hero scene, scroll choreography, live stats |
 | `js/case.js` | Case-study page |

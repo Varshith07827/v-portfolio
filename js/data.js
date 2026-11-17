@@ -454,5 +454,83 @@ window.PROJECTS = [
         "cap": "The calendar, with the unscheduled tray"
       }
     ]
+  },
+  {
+    "id": "quantum",
+    "num": "07",
+    "roman": "VII",
+    "name": "Quantum Axiona",
+    "title": "Quantum circuit playground",
+    "short": "Drag gates onto qubit wires and watch the state evolve: probabilities, phases, Bloch spheres, density matrices and noisy measurements.",
+    "tags": "Python · Qiskit · Flask · React",
+    "blurb": "A quantum circuit playground. Drag gates onto qubit wires and watch the state evolve: measurement probabilities, the statevector with phases, a draggable Bloch sphere per qubit, density-matrix heatmaps, noisy measurements and a PDF report.",
+    "stack": [
+      "PYTHON",
+      "FLASK",
+      "QISKIT",
+      "QISKIT AER",
+      "NUMPY",
+      "REPORTLAB",
+      "REACT 19",
+      "TYPESCRIPT",
+      "VITE",
+      "TAILWIND 4",
+      "RADIX UI",
+      "RECHARTS",
+      "MOTION",
+      "PYTEST"
+    ],
+    "links": [],
+    "gallery": [
+      {
+        "src": "assets/quantum-circuit.jpg",
+        "alt": "Quantum Axiona: a three-qubit circuit with H, rotation and CNOT gates, a step slider, the state written as a sum of kets, and purity and entanglement readouts",
+        "cap": "A three-qubit circuit with its live state: kets with phases, purity and entanglement"
+      },
+      {
+        "src": "assets/quantum-measure.jpg",
+        "alt": "Quantum Axiona: exact probabilities beside 1024 sampled shots with 2 percent gate noise, and the statevector table",
+        "cap": "Exact probabilities against a noisy 1024-shot measurement"
+      },
+      {
+        "src": "assets/quantum-bloch.jpg",
+        "alt": "Quantum Axiona: one Bloch sphere per qubit marking q0 as pure and q1 and q2 as entangled, above a density-matrix heatmap",
+        "cap": "A Bloch sphere per qubit: pure states sit on the surface, entangled ones inside"
+      }
+    ],
+    "sections": [
+      {
+        "h": "WHAT IT IS",
+        "body": [
+          "A browser-based playground for building small quantum circuits, up to six qubits and 200 gates. You drag a gate onto a wire (or pick one and click), and the whole picture updates at once: measurement probabilities, the statevector written as a sum of kets with phases, a Bloch sphere for each qubit, and the density matrix as a hoverable heatmap, along with purity and entanglement."
+        ]
+      },
+      {
+        "h": "WHY IT MATTERS",
+        "body": [
+          "Quantum states are hard to build intuition for from equations alone. Seeing a CNOT turn two independent Bloch spheres into two dots sitting inside their spheres, with the entanglement readout rising from 0 to 1, makes the idea concrete. Stepping through the circuit one gate at a time shows exactly where each change happens."
+        ]
+      },
+      {
+        "h": "WHAT I BUILT",
+        "body": [
+          "A Flask JSON API over Qiskit: every mutation (add or remove a gate, undo, import, load an example) returns the full new circuit state, which keeps the frontend a thin view. Each browser gets its own circuit through a signed session, and inputs are validated at the boundary: qubit ranges, duplicate qubits, angle expressions parsed without eval, shot and noise limits, upload size.",
+          "The React 19 frontend adds drag-and-drop with a click-to-place fallback, a step-through slider that replays the circuit gate by gate, a measurement lab that samples 256 to 16k shots with optional depolarizing noise, OpenQASM 2.0 import and export, shareable links that keep the circuit in the URL hash rather than on a server, a PDF report, a command palette and a phone layout with a bottom sheet.",
+          "Auditing it before adding it here turned up two real defects, now fixed: an absurd rotation angle such as 1e308 was accepted and then crashed the PDF report with a server error, and a stats label was clipped. Angles are now limited to ±100π for typed gates and imported QASM alike, with regression tests; the API suite is at 19 tests."
+        ]
+      }
+    ],
+    "now": [
+      "DRAG-AND-DROP + CLICK-TO-PLACE",
+      "STEP-THROUGH REPLAY",
+      "STATEVECTOR WITH PHASES",
+      "BLOCH SPHERE PER QUBIT",
+      "DENSITY-MATRIX HEATMAP",
+      "PURITY + ENTANGLEMENT",
+      "NOISY MEASUREMENT LAB",
+      "OPENQASM 2.0 IMPORT / EXPORT",
+      "SHARE LINKS IN THE URL HASH",
+      "PDF REPORT"
+    ]
   }
 ];
