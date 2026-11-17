@@ -9,7 +9,7 @@ Plain static HTML/CSS/JS — no build step.
 | `index.html` | Home: loader, pinned watch-dial hero that opens into the credo, the work index, experience, craft, live competitive-programming certificate, portrait, correspondence |
 | `case.html` | Case-study dossiers, hash-routed (`case.html#winspark`), rendered from `js/data.js` |
 | `style.css` | The whole design system (tokens at the top) |
-| `js/data.js` | Single source of truth for the seven projects: copy, stack, screenshots |
+| `js/data.js` | Single source of truth for the six projects: copy, stack, screenshots |
 | `js/common.js` | Smooth scroll (Lenis), page-transition curtain, nav, cursor, clocks |
 | `js/home.js` | The dial, loader, hero scene, scroll choreography, live stats |
 | `js/case.js` | Case-study page |
@@ -31,4 +31,4 @@ then open <http://localhost:8000>.
 - Respects `prefers-reduced-motion`: no smooth scroll, pinning or loader.
 - The loader plays once per browser session; navigating between pages uses a curtain transition.
 - Hidden: the Konami code shows the visit counter.
-- Screenshots: DigiTwin, Mantis, the AI PII Detector and SignalOps were captured from the running projects in their light themes (the PII scan uses fictional sample data; SignalOps runs the real engine on a clearly-labelled synthetic dataset because the hackathon pack isn't public). Mantis and the PII Detector screenshots use their rebuilt React UIs. Atlas is dark-only, so its captures are dark. WinSpark is Windows-only, so its capture comes from the project's own docs.
+- Screenshots: DigiTwin, Mantis, SignalOps and Quantum Axiona were captured from the running projects in their light themes (SignalOps runs the real engine on a clearly-labelled synthetic dataset because the hackathon pack isn't public). Mantis's screenshots use its rebuilt React UI. Atlas is dark-only, so its captures are dark. WinSpark is Windows-only, so its capture comes from the project's own docs.
