@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-11-18T15:17:20.778Z",
+  "generatedAt": "2026-11-19T15:24:46.568Z",
   "leetcode": {
     "username": "Vince7827",
-    "totalSolved": 523,
+    "totalSolved": 524,
     "easySolved": 253,
-    "mediumSolved": 204,
+    "mediumSolved": 205,
     "hardSolved": 66,
-    "contestRating": 1859,
+    "contestRating": 1852,
     "maxContestRating": 1859,
-    "contestsAttended": 20,
-    "topPercentage": 6.17,
+    "contestsAttended": 21,
+    "topPercentage": 6.47,
     "mostRecentContest": {
-      "title": "Weekly Contest 526",
-      "date": "2026-11-01",
-      "rank": 2863
+      "title": "Weekly Contest 528",
+      "date": "2026-11-15",
+      "rank": 3258
     }
   },
   "codechef": {
